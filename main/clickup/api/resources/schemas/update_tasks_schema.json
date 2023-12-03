@@ -1,0 +1,177 @@
+{
+    "type": "object",
+    "required": [
+        "name",
+        "description",
+        "status",
+        "priority",
+        "due_date",
+        "due_date_time",
+        "parent",
+        "time_estimate",
+        "start_date",
+        "start_date_time",
+        "assignees",
+        "archived"
+    ],
+    "properties": {
+        "name": {
+            "type": "string",
+            "default": "",
+            "title": "The name Schema",
+            "examples": [
+                "Updated Task Name"
+            ]
+        },
+        "description": {
+            "type": "string",
+            "default": "",
+            "title": "The description Schema",
+            "examples": [
+                "Updated Task Content"
+            ]
+        },
+        "status": {
+            "type": "string",
+            "default": "",
+            "title": "The status Schema",
+            "examples": [
+                "in progress"
+            ]
+        },
+        "priority": {
+            "type": "integer",
+            "default": 0,
+            "title": "The priority Schema",
+            "examples": [
+                1
+            ]
+        },
+        "due_date": {
+            "type": "integer",
+            "default": 0,
+            "title": "The due_date Schema",
+            "examples": [
+                1508369194377
+            ]
+        },
+        "due_date_time": {
+            "type": "boolean",
+            "default": false,
+            "title": "The due_date_time Schema",
+            "examples": [
+                false
+            ]
+        },
+        "parent": {
+            "type": "string",
+            "default": "",
+            "title": "The parent Schema",
+            "examples": [
+                "abc1234"
+            ]
+        },
+        "time_estimate": {
+            "type": "integer",
+            "default": 0,
+            "title": "The time_estimate Schema",
+            "examples": [
+                8640000
+            ]
+        },
+        "start_date": {
+            "type": "integer",
+            "default": 0,
+            "title": "The start_date Schema",
+            "examples": [
+                1567780450202
+            ]
+        },
+        "start_date_time": {
+            "type": "boolean",
+            "default": false,
+            "title": "The start_date_time Schema",
+            "examples": [
+                false
+            ]
+        },
+        "assignees": {
+            "type": "object",
+            "default": {},
+            "title": "The assignees Schema",
+            "required": [
+                "add",
+                "rem"
+            ],
+            "properties": {
+                "add": {
+                    "type": "array",
+                    "default": [],
+                    "title": "The add Schema",
+                    "items": {
+                        "type": "integer",
+                        "default": 0,
+                        "title": "A Schema",
+                        "examples": [
+                            182
+                        ]
+                    },
+                    "examples": [
+                        [
+                            182]
+                    ]
+                },
+                "rem": {
+                    "type": "array",
+                    "default": [],
+                    "title": "The rem Schema",
+                    "items": {
+                        "type": "integer",
+                        "default": 0,
+                        "title": "A Schema",
+                        "examples": [
+                            183
+                        ]
+                    },
+                    "examples": [
+                        [
+                            183]
+                    ]
+                }
+            },
+            "examples": [{
+                "add": [
+                    182],
+                "rem": [
+                    183]
+            }]
+        },
+        "archived": {
+            "type": "boolean",
+            "default": false,
+            "title": "The archived Schema",
+            "examples": [
+                false
+            ]
+        }
+    },
+    "examples": [{
+        "name": "Updated Task Name",
+        "description": "Updated Task Content",
+        "status": "in progress",
+        "priority": 1,
+        "due_date": 1508369194377,
+        "due_date_time": false,
+        "parent": "abc1234",
+        "time_estimate": 8640000,
+        "start_date": 1567780450202,
+        "start_date_time": false,
+        "assignees": {
+            "add": [
+                182],
+            "rem": [
+                183]
+        },
+        "archived": false
+    }]
+}

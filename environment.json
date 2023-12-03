@@ -1,0 +1,15 @@
+{
+  "test": {
+    "api-url": "https://api.clickup.com/api/v2",
+    "ui-url": "https://app.clickup.com/login",
+    "api-url-trash": "https://app.clickup.com/trash/v1",
+    "users": {
+      "free": {
+        "token_bearer": "",
+        "token": "",
+        "email": "",
+        "password": ""
+      }
+    }
+  }
+}

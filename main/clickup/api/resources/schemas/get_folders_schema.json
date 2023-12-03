@@ -1,0 +1,224 @@
+{
+    "type": "object",
+    "required": [
+        "folders"
+    ],
+    "properties": {
+        "folders": {
+            "type": "array",
+            "default": [],
+            "title": "The folders Schema",
+            "items": {
+                "type": "object",
+                "default": {},
+                "title": "A Schema",
+                "required": [
+                    "id",
+                    "name",
+                    "orderindex",
+                    "override_statuses",
+                    "hidden",
+                    "space",
+                    "task_count",
+                    "archived",
+                    "statuses",
+                    "lists",
+                    "permission_level"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The id Schema",
+                        "examples": [
+                            "90020696544"
+                        ]
+                    },
+                    "name": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The name Schema",
+                        "examples": [
+                            "Projects"
+                        ]
+                    },
+                    "orderindex": {
+                        "type": "integer",
+                        "default": 0,
+                        "title": "The orderindex Schema",
+                        "examples": [
+                            2
+                        ]
+                    },
+                    "override_statuses": {
+                        "type": "boolean",
+                        "default": false,
+                        "title": "The override_statuses Schema",
+                        "examples": [
+                            true
+                        ]
+                    },
+                    "hidden": {
+                        "type": "boolean",
+                        "default": false,
+                        "title": "The hidden Schema",
+                        "examples": [
+                            false
+                        ]
+                    },
+                    "space": {
+                        "type": "object",
+                        "default": {},
+                        "title": "The space Schema",
+                        "required": [
+                            "id",
+                            "name"
+                        ],
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The id Schema",
+                                "examples": [
+                                    "90020305183"
+                                ]
+                            },
+                            "name": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The name Schema",
+                                "examples": [
+                                    "Team Space"
+                                ]
+                            }
+                        },
+                        "examples": [{
+                            "id": "90020305183",
+                            "name": "Team Space"
+                        }]
+                    },
+                    "task_count": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The task_count Schema",
+                        "examples": [
+                            "6"
+                        ]
+                    },
+                    "archived": {
+                        "type": "boolean",
+                        "default": false,
+                        "title": "The archived Schema",
+                        "examples": [
+                            false
+                        ]
+                    },
+                    "statuses": {
+                        "type": "array",
+                        "default": [],
+                        "title": "The statuses Schema",
+                        "items": {
+                            "type": "object",
+                            "title": "A Schema",
+                            "required": [],
+                            "properties": {},
+                            "examples": [{},
+                            {},
+                            {}]
+                        },
+                        "examples": [
+                            [{}, {},
+                            {}]
+                        ]
+                    },
+                    "lists": {
+                        "type": "array",
+                        "default": [],
+                        "title": "The lists Schema",
+                        "items": {
+                            "type": "object",
+                            "title": "A Schema",
+                            "required": [],
+                            "properties": {},
+                            "examples": [{},
+                            {}]
+                        },
+                        "examples": [
+                            [{},
+                                {}]
+                        ]
+                    },
+                    "permission_level": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The permission_level Schema",
+                        "examples": [
+                            "create"
+                        ]
+                    }
+                },
+                "examples": [{
+                    "id": "90020696544",
+                    "name": "Projects",
+                    "orderindex": 2,
+                    "override_statuses": true,
+                    "hidden": false,
+                    "space": {
+                        "id": "90020305183",
+                        "name": "Team Space"
+                    },
+                    "task_count": "6",
+                    "archived": false,
+                    "statuses": [{},
+                    {},
+                    {}],
+                    "lists": [{},
+                    {}],
+                    "permission_level": "create"
+                }]
+            },
+            "examples": [
+                [{
+                    "id": "90020696544",
+                    "name": "Projects",
+                    "orderindex": 2,
+                    "override_statuses": true,
+                    "hidden": false,
+                    "space": {
+                        "id": "90020305183",
+                        "name": "Team Space"
+                    },
+                    "task_count": "6",
+                    "archived": false,
+                    "statuses": [{},
+                    {},
+                    {}],
+                    "lists": [{},
+                    {}],
+                    "permission_level": "create"
+                }]
+            ]
+        }
+    },
+    "examples": [{
+        "folders": [{
+            "id": "90020696544",
+            "name": "Projects",
+            "orderindex": 2,
+            "override_statuses": true,
+            "hidden": false,
+            "space": {
+                "id": "90020305183",
+                "name": "Team Space"
+            },
+            "task_count": "6",
+            "archived": false,
+            "statuses": [{},
+            {},
+            {}],
+            "lists": [{},
+            {}],
+            "permission_level": "create"
+        }]
+    }]
+}

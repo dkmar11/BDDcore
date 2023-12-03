@@ -1,0 +1,347 @@
+{
+    "type": "object",
+    "required": [
+        "id",
+        "name",
+        "deleted",
+        "orderindex",
+        "content",
+        "priority",
+        "assignee",
+        "due_date",
+        "start_date",
+        "folder",
+        "space",
+        "inbound_address",
+        "archived",
+        "override_statuses",
+        "statuses",
+        "permission_level"
+    ],
+    "properties": {
+        "id": {
+            "type": "string",
+            "default": "",
+            "title": "The id Schema",
+            "examples": [
+                "900201361875"
+            ]
+        },
+        "name": {
+            "type": "string",
+            "default": "",
+            "title": "The name Schema",
+            "examples": [
+                "New List Name"
+            ]
+        },
+        "deleted": {
+            "type": "boolean",
+            "default": false,
+            "title": "The deleted Schema",
+            "examples": [
+                false
+            ]
+        },
+        "orderindex": {
+            "type": "integer",
+            "default": 0,
+            "title": "The orderindex Schema",
+            "examples": [
+                0
+            ]
+        },
+        "content": {
+            "type": "string",
+            "default": "",
+            "title": "The content Schema",
+            "examples": [
+                ""
+            ]
+        },
+        "priority": {
+            "type": "null",
+            "default": null,
+            "title": "The priority Schema",
+            "examples": [
+                null
+            ]
+        },
+        "assignee": {
+            "type": "null",
+            "default": null,
+            "title": "The assignee Schema",
+            "examples": [
+                null
+            ]
+        },
+        "due_date": {
+            "type": "null",
+            "default": null,
+            "title": "The due_date Schema",
+            "examples": [
+                null
+            ]
+        },
+        "start_date": {
+            "type": "null",
+            "default": null,
+            "title": "The start_date Schema",
+            "examples": [
+                null
+            ]
+        },
+        "folder": {
+            "type": "object",
+            "default": {},
+            "title": "The folder Schema",
+            "required": [
+                "id",
+                "name",
+                "hidden",
+                "access"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The id Schema",
+                    "examples": [
+                        "90020742724"
+                    ]
+                },
+                "name": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The name Schema",
+                    "examples": [
+                        "hidden"
+                    ]
+                },
+                "hidden": {
+                    "type": "boolean",
+                    "default": false,
+                    "title": "The hidden Schema",
+                    "examples": [
+                        true
+                    ]
+                },
+                "access": {
+                    "type": "boolean",
+                    "default": false,
+                    "title": "The access Schema",
+                    "examples": [
+                        true
+                    ]
+                }
+            },
+            "examples": [{
+                "id": "90020742724",
+                "name": "hidden",
+                "hidden": true,
+                "access": true
+            }]
+        },
+        "space": {
+            "type": "object",
+            "default": {},
+            "title": "The space Schema",
+            "required": [
+                "id",
+                "name",
+                "access"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The id Schema",
+                    "examples": [
+                        "90080401323"
+                    ]
+                },
+                "name": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The name Schema",
+                    "examples": [
+                        "Lists_Space"
+                    ]
+                },
+                "access": {
+                    "type": "boolean",
+                    "default": false,
+                    "title": "The access Schema",
+                    "examples": [
+                        true
+                    ]
+                }
+            },
+            "examples": [{
+                "id": "90080401323",
+                "name": "Lists_Space",
+                "access": true
+            }]
+        },
+        "inbound_address": {
+            "type": "string",
+            "default": "",
+            "title": "The inbound_address Schema",
+            "examples": [
+                "a.t.900201361875.u-67357076.a199dd8a-b964-4a5f-bbb0-409fa21a9dd4@tasks.clickup.com"
+            ]
+        },
+        "archived": {
+            "type": "boolean",
+            "default": false,
+            "title": "The archived Schema",
+            "examples": [
+                false
+            ]
+        },
+        "override_statuses": {
+            "type": "boolean",
+            "default": false,
+            "title": "The override_statuses Schema",
+            "examples": [
+                false
+            ]
+        },
+        "statuses": {
+            "type": "array",
+            "default": [],
+            "title": "The statuses Schema",
+            "items": {
+                "type": "object",
+                "title": "A Schema",
+                "required": [
+                    "id",
+                    "status",
+                    "orderindex",
+                    "color",
+                    "type"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "title": "The id Schema",
+                        "examples": [
+                            "p90080401323_XZxzaASm",
+                            "p90080401323_Db8wuNu4"
+                        ]
+                    },
+                    "status": {
+                        "type": "string",
+                        "title": "The status Schema",
+                        "examples": [
+                            "to do",
+                            "complete"
+                        ]
+                    },
+                    "orderindex": {
+                        "type": "integer",
+                        "title": "The orderindex Schema",
+                        "examples": [
+                            0,
+                            1
+                        ]
+                    },
+                    "color": {
+                        "type": "string",
+                        "title": "The color Schema",
+                        "examples": [
+                            "#d3d3d3",
+                            "#6bc950"
+                        ]
+                    },
+                    "type": {
+                        "type": "string",
+                        "title": "The type Schema",
+                        "examples": [
+                            "open",
+                            "closed"
+                        ]
+                    }
+                },
+                "examples": [{
+                    "id": "p90080401323_XZxzaASm",
+                    "status": "to do",
+                    "orderindex": 0,
+                    "color": "#d3d3d3",
+                    "type": "open"
+                },
+                {
+                    "id": "p90080401323_Db8wuNu4",
+                    "status": "complete",
+                    "orderindex": 1,
+                    "color": "#6bc950",
+                    "type": "closed"
+                }]
+            },
+            "examples": [
+                [{
+                    "id": "p90080401323_XZxzaASm",
+                    "status": "to do",
+                    "orderindex": 0,
+                    "color": "#d3d3d3",
+                    "type": "open"
+                },
+                {
+                    "id": "p90080401323_Db8wuNu4",
+                    "status": "complete",
+                    "orderindex": 1,
+                    "color": "#6bc950",
+                    "type": "closed"
+                }]
+            ]
+        },
+        "permission_level": {
+            "type": "string",
+            "default": "",
+            "title": "The permission_level Schema",
+            "examples": [
+                "create"
+            ]
+        }
+    },
+    "examples": [{
+        "id": "900201361875",
+        "name": "New List Name",
+        "deleted": false,
+        "orderindex": 0,
+        "content": "",
+        "priority": null,
+        "assignee": null,
+        "due_date": null,
+        "start_date": null,
+        "folder": {
+            "id": "90020742724",
+            "name": "hidden",
+            "hidden": true,
+            "access": true
+        },
+        "space": {
+            "id": "90080401323",
+            "name": "Lists_Space",
+            "access": true
+        },
+        "inbound_address": "a.t.900201361875.u-67357076.a199dd8a-b964-4a5f-bbb0-409fa21a9dd4@tasks.clickup.com",
+        "archived": false,
+        "override_statuses": false,
+        "statuses": [{
+            "id": "p90080401323_XZxzaASm",
+            "status": "to do",
+            "orderindex": 0,
+            "color": "#d3d3d3",
+            "type": "open"
+        },
+        {
+            "id": "p90080401323_Db8wuNu4",
+            "status": "complete",
+            "orderindex": 1,
+            "color": "#6bc950",
+            "type": "closed"
+        }],
+        "permission_level": "create"
+    }]
+}

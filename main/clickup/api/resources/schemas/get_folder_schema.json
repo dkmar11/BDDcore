@@ -1,0 +1,127 @@
+{
+    "type": "object",
+     "required": [
+        "id",
+        "name",
+        "orderindex",
+        "override_statuses",
+        "hidden",
+        "space",
+        "task_count",
+        "lists"
+    ],
+    "properties": {
+        "id": {
+            "type": "string",
+            "default": "",
+            "title": "The id Schema",
+            "examples": [
+                "457"
+            ]
+        },
+        "name": {
+            "type": "string",
+            "default": "",
+            "title": "The name Schema",
+            "examples": [
+                "Updated Folder Name"
+            ]
+        },
+        "orderindex": {
+            "type": "integer",
+            "default": 0,
+            "title": "The orderindex Schema",
+            "examples": [
+                0
+            ]
+        },
+        "override_statuses": {
+            "type": "boolean",
+            "default": false,
+            "title": "The override_statuses Schema",
+            "examples": [
+                false
+            ]
+        },
+        "hidden": {
+            "type": "boolean",
+            "default": false,
+            "title": "The hidden Schema",
+            "examples": [
+                false
+            ]
+        },
+        "space": {
+            "type": "object",
+            "default": {},
+            "title": "The space Schema",
+            "required": [
+                "id",
+                "name",
+                "access"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The id Schema",
+                    "examples": [
+                        "789"
+                    ]
+                },
+                "name": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The name Schema",
+                    "examples": [
+                        "Space Name"
+                    ]
+                },
+                "access": {
+                    "type": "boolean",
+                    "default": false,
+                    "title": "The access Schema",
+                    "examples": [
+                        true
+                    ]
+                }
+            },
+            "examples": [{
+                "id": "789",
+                "name": "Space Name",
+                "access": true
+            }]
+        },
+        "task_count": {
+            "type": "string",
+            "default": "",
+            "title": "The task_count Schema",
+            "examples": [
+                "0"
+            ]
+        },
+        "lists": {
+            "type": "array",
+            "default": [],
+            "title": "The lists Schema",
+            "items": {},
+            "examples": [
+                []
+            ]
+        }
+    },
+    "examples": [{
+        "id": "457",
+        "name": "Updated Folder Name",
+        "orderindex": 0,
+        "override_statuses": false,
+        "hidden": false,
+        "space": {
+            "id": "789",
+            "name": "Space Name",
+            "access": true
+        },
+        "task_count": "0",
+        "lists": []
+    }]
+}

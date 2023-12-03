@@ -1,0 +1,33 @@
+{
+  "environment": "test",
+  "log-level": "debug",
+  "browser": "EDGE",
+  "timeout": 20000,
+  "implicit_wait": 15000,
+  "conditions_timeout": 3000,
+  "scenario_timeout":5000,
+  "remote":{
+    "username":"",
+    "key":"",
+    "host":"",
+    "capabilities": {
+      "browserName": "Chrome",
+      "browserVersion": "latest",
+      "LT:Options": {
+          "platformName": "Windows 10",
+          "name": "AT20-group",
+          "build": "NodeJS build",
+          "project": "Clickup",
+          "w3c": true,
+          "plugin": "node_js-node_js"
+      }
+    }
+  },
+  "capabilities": {
+    "headless": false,
+    "window": {
+      "width":1920,
+      "height":1080
+    }
+  }
+}

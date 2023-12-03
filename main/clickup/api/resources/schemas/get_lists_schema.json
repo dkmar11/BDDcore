@@ -1,0 +1,477 @@
+{
+    "type": "object",
+    "required": [
+        "lists"
+    ],
+    "properties": {
+        "lists": {
+            "type": "array",
+            "default": [],
+            "title": "The lists Schema",
+            "items": {
+                "type": "object",
+                "title": "A Schema",
+                "required": [
+                    "id",
+                    "name",
+                    "orderindex",
+                    "content",
+                    "status",
+                    "priority",
+                    "assignee",
+                    "task_count",
+                    "due_date",
+                    "start_date",
+                    "folder",
+                    "space",
+                    "archived",
+                    "override_statuses",
+                    "permission_level"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "title": "The id Schema",
+                        "examples": [
+                            "900801719680",
+                            "900201238287",
+                            "900201238300"
+                        ]
+                    },
+                    "name": {
+                        "type": "string",
+                        "title": "The name Schema",
+                        "examples": [
+                            "testlist",
+                            "TestList2",
+                            "TestList3"
+                        ]
+                    },
+                    "orderindex": {
+                        "type": "integer",
+                        "title": "The orderindex Schema",
+                        "examples": [
+                            0,
+                            1,
+                            2
+                        ]
+                    },
+                    "content": {
+                        "type": "string",
+                        "title": "The content Schema",
+                        "examples": [
+                            ""
+                        ]
+                    },
+                    "status": {
+                        "type": "null",
+                        "title": "The status Schema",
+                        "examples": [
+                            null
+                        ]
+                    },
+                    "priority": {
+                        "type": "null",
+                        "title": "The priority Schema",
+                        "examples": [
+                            null
+                        ]
+                    },
+                    "assignee": {
+                        "type": "null",
+                        "title": "The assignee Schema",
+                        "examples": [
+                            null
+                        ]
+                    },
+                    "task_count": {
+                        "type": "integer",
+                        "title": "The task_count Schema",
+                        "examples": [
+                            0,
+                            1
+                        ]
+                    },
+                    "due_date": {
+                        "type": "null",
+                        "title": "The due_date Schema",
+                        "examples": [
+                            null
+                        ]
+                    },
+                    "start_date": {
+                        "type": "null",
+                        "title": "The start_date Schema",
+                        "examples": [
+                            null
+                        ]
+                    },
+                    "folder": {
+                        "type": "object",
+                        "title": "The folder Schema",
+                        "required": [
+                            "id",
+                            "name",
+                            "hidden",
+                            "access"
+                        ],
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "title": "The id Schema",
+                                "examples": [
+                                    "90020677375"
+                                ]
+                            },
+                            "name": {
+                                "type": "string",
+                                "title": "The name Schema",
+                                "examples": [
+                                    "TestFolder"
+                                ]
+                            },
+                            "hidden": {
+                                "type": "boolean",
+                                "title": "The hidden Schema",
+                                "examples": [
+                                    false
+                                ]
+                            },
+                            "access": {
+                                "type": "boolean",
+                                "title": "The access Schema",
+                                "examples": [
+                                    true
+                                ]
+                            }
+                        },
+                        "examples": [{
+                            "id": "90020677375",
+                            "name": "TestFolder",
+                            "hidden": false,
+                            "access": true
+                        },
+                        {
+                            "id": "90020677375",
+                            "name": "TestFolder",
+                            "hidden": false,
+                            "access": true
+                        },
+                        {
+                            "id": "90020677375",
+                            "name": "TestFolder",
+                            "hidden": false,
+                            "access": true
+                        }]
+                    },
+                    "space": {
+                        "type": "object",
+                        "title": "The space Schema",
+                        "required": [
+                            "id",
+                            "name",
+                            "access"
+                        ],
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "title": "The id Schema",
+                                "examples": [
+                                    "90020294175"
+                                ]
+                            },
+                            "name": {
+                                "type": "string",
+                                "title": "The name Schema",
+                                "examples": [
+                                    "New Space Name"
+                                ]
+                            },
+                            "access": {
+                                "type": "boolean",
+                                "title": "The access Schema",
+                                "examples": [
+                                    true
+                                ]
+                            }
+                        },
+                        "examples": [{
+                            "id": "90020294175",
+                            "name": "New Space Name",
+                            "access": true
+                        },
+                        {
+                            "id": "90020294175",
+                            "name": "New Space Name",
+                            "access": true
+                        },
+                        {
+                            "id": "90020294175",
+                            "name": "New Space Name",
+                            "access": true
+                        }]
+                    },
+                    "archived": {
+                        "type": "boolean",
+                        "title": "The archived Schema",
+                        "examples": [
+                            false
+                        ]
+                    },
+                    "override_statuses": {
+                        "type": "boolean",
+                        "title": "The override_statuses Schema",
+                        "examples": [
+                            false
+                        ]
+                    },
+                    "permission_level": {
+                        "type": "string",
+                        "title": "The permission_level Schema",
+                        "examples": [
+                            "create"
+                        ]
+                    }
+                },
+                "examples": [{
+                    "id": "900801719680",
+                    "name": "testlist",
+                    "orderindex": 0,
+                    "content": "",
+                    "status": null,
+                    "priority": null,
+                    "assignee": null,
+                    "task_count": 0,
+                    "due_date": null,
+                    "start_date": null,
+                    "folder": {
+                        "id": "90020677375",
+                        "name": "TestFolder",
+                        "hidden": false,
+                        "access": true
+                    },
+                    "space": {
+                        "id": "90020294175",
+                        "name": "New Space Name",
+                        "access": true
+                    },
+                    "archived": false,
+                    "override_statuses": false,
+                    "permission_level": "create"
+                },
+                {
+                    "id": "900201238287",
+                    "name": "TestList2",
+                    "orderindex": 1,
+                    "content": "",
+                    "status": null,
+                    "priority": null,
+                    "assignee": null,
+                    "task_count": 1,
+                    "due_date": null,
+                    "start_date": null,
+                    "folder": {
+                        "id": "90020677375",
+                        "name": "TestFolder",
+                        "hidden": false,
+                        "access": true
+                    },
+                    "space": {
+                        "id": "90020294175",
+                        "name": "New Space Name",
+                        "access": true
+                    },
+                    "archived": false,
+                    "override_statuses": false,
+                    "permission_level": "create"
+                },
+                {
+                    "id": "900201238300",
+                    "name": "TestList3",
+                    "orderindex": 2,
+                    "content": "",
+                    "status": null,
+                    "priority": null,
+                    "assignee": null,
+                    "task_count": 0,
+                    "due_date": null,
+                    "start_date": null,
+                    "folder": {
+                        "id": "90020677375",
+                        "name": "TestFolder",
+                        "hidden": false,
+                        "access": true
+                    },
+                    "space": {
+                        "id": "90020294175",
+                        "name": "New Space Name",
+                        "access": true
+                    },
+                    "archived": false,
+                    "override_statuses": false,
+                    "permission_level": "create"
+                }]
+            },
+            "examples": [
+                [{
+                    "id": "900801719680",
+                    "name": "testlist",
+                    "orderindex": 0,
+                    "content": "",
+                    "status": null,
+                    "priority": null,
+                    "assignee": null,
+                    "task_count": 0,
+                    "due_date": null,
+                    "start_date": null,
+                    "folder": {
+                        "id": "90020677375",
+                        "name": "TestFolder",
+                        "hidden": false,
+                        "access": true
+                    },
+                    "space": {
+                        "id": "90020294175",
+                        "name": "New Space Name",
+                        "access": true
+                    },
+                    "archived": false,
+                    "override_statuses": false,
+                    "permission_level": "create"
+                },
+                {
+                    "id": "900201238287",
+                    "name": "TestList2",
+                    "orderindex": 1,
+                    "content": "",
+                    "status": null,
+                    "priority": null,
+                    "assignee": null,
+                    "task_count": 1,
+                    "due_date": null,
+                    "start_date": null,
+                    "folder": {
+                        "id": "90020677375",
+                        "name": "TestFolder",
+                        "hidden": false,
+                        "access": true
+                    },
+                    "space": {
+                        "id": "90020294175",
+                        "name": "New Space Name",
+                        "access": true
+                    },
+                    "archived": false,
+                    "override_statuses": false,
+                    "permission_level": "create"
+                },
+                {
+                    "id": "900201238300",
+                    "name": "TestList3",
+                    "orderindex": 2,
+                    "content": "",
+                    "status": null,
+                    "priority": null,
+                    "assignee": null,
+                    "task_count": 0,
+                    "due_date": null,
+                    "start_date": null,
+                    "folder": {
+                        "id": "90020677375",
+                        "name": "TestFolder",
+                        "hidden": false,
+                        "access": true
+                    },
+                    "space": {
+                        "id": "90020294175",
+                        "name": "New Space Name",
+                        "access": true
+                    },
+                    "archived": false,
+                    "override_statuses": false,
+                    "permission_level": "create"
+                }]
+            ]
+        }
+    },
+    "examples": [{
+        "lists": [{
+            "id": "900801719680",
+            "name": "testlist",
+            "orderindex": 0,
+            "content": "",
+            "status": null,
+            "priority": null,
+            "assignee": null,
+            "task_count": 0,
+            "due_date": null,
+            "start_date": null,
+            "folder": {
+                "id": "90020677375",
+                "name": "TestFolder",
+                "hidden": false,
+                "access": true
+            },
+            "space": {
+                "id": "90020294175",
+                "name": "New Space Name",
+                "access": true
+            },
+            "archived": false,
+            "override_statuses": false,
+            "permission_level": "create"
+        },
+        {
+            "id": "900201238287",
+            "name": "TestList2",
+            "orderindex": 1,
+            "content": "",
+            "status": null,
+            "priority": null,
+            "assignee": null,
+            "task_count": 1,
+            "due_date": null,
+            "start_date": null,
+            "folder": {
+                "id": "90020677375",
+                "name": "TestFolder",
+                "hidden": false,
+                "access": true
+            },
+            "space": {
+                "id": "90020294175",
+                "name": "New Space Name",
+                "access": true
+            },
+            "archived": false,
+            "override_statuses": false,
+            "permission_level": "create"
+        },
+        {
+            "id": "900201238300",
+            "name": "TestList3",
+            "orderindex": 2,
+            "content": "",
+            "status": null,
+            "priority": null,
+            "assignee": null,
+            "task_count": 0,
+            "due_date": null,
+            "start_date": null,
+            "folder": {
+                "id": "90020677375",
+                "name": "TestFolder",
+                "hidden": false,
+                "access": true
+            },
+            "space": {
+                "id": "90020294175",
+                "name": "New Space Name",
+                "access": true
+            },
+            "archived": false,
+            "override_statuses": false,
+            "permission_level": "create"
+        }]
+    }]
+}

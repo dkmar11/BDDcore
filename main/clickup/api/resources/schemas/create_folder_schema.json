@@ -1,0 +1,158 @@
+{
+    "type": "object",
+    "required": [
+        "id",
+        "name",
+        "orderindex",
+        "override_statuses",
+        "hidden",
+        "space",
+        "task_count",
+        "archived",
+        "statuses",
+        "lists",
+        "permission_level"
+    ],
+    "properties": {
+        "id": {
+            "type": "string",
+            "default": "",
+            "title": "The id Schema",
+            "examples": [
+                "90020754028"
+            ]
+        },
+        "name": {
+            "type": "string",
+            "default": "",
+            "title": "The name Schema",
+            "examples": [
+                "New Folder Name"
+            ]
+        },
+        "orderindex": {
+            "type": "integer",
+            "default": 0,
+            "title": "The orderindex Schema",
+            "examples": [
+                0
+            ]
+        },
+        "override_statuses": {
+            "type": "boolean",
+            "default": false,
+            "title": "The override_statuses Schema",
+            "examples": [
+                false
+            ]
+        },
+        "hidden": {
+            "type": "boolean",
+            "default": false,
+            "title": "The hidden Schema",
+            "examples": [
+                false
+            ]
+        },
+        "space": {
+            "type": "object",
+            "default": {},
+            "title": "The space Schema",
+            "required": [
+                "id",
+                "name",
+                "access"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The id Schema",
+                    "examples": [
+                        "90020305183"
+                    ]
+                },
+                "name": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The name Schema",
+                    "examples": [
+                        "Team Space"
+                    ]
+                },
+                "access": {
+                    "type": "boolean",
+                    "default": false,
+                    "title": "The access Schema",
+                    "examples": [
+                        true
+                    ]
+                }
+            },
+            "examples": [{
+                "id": "90020305183",
+                "name": "Team Space",
+                "access": true
+            }]
+        },
+        "task_count": {
+            "type": "string",
+            "default": "",
+            "title": "The task_count Schema",
+            "examples": [
+                "0"
+            ]
+        },
+        "archived": {
+            "type": "boolean",
+            "default": false,
+            "title": "The archived Schema",
+            "examples": [
+                false
+            ]
+        },
+        "statuses": {
+            "type": "array",
+            "default": [],
+            "title": "The statuses Schema",
+            "items": {},
+            "examples": [
+                []
+            ]
+        },
+        "lists": {
+            "type": "array",
+            "default": [],
+            "title": "The lists Schema",
+            "items": {},
+            "examples": [
+                []
+            ]
+        },
+        "permission_level": {
+            "type": "string",
+            "default": "",
+            "title": "The permission_level Schema",
+            "examples": [
+                "create"
+            ]
+        }
+    },
+    "examples": [{
+        "id": "90020754028",
+        "name": "New Folder Name",
+        "orderindex": 0,
+        "override_statuses": false,
+        "hidden": false,
+        "space": {
+            "id": "90020305183",
+            "name": "Team Space",
+            "access": true
+        },
+        "task_count": "0",
+        "archived": false,
+        "statuses": [],
+        "lists": [],
+        "permission_level": "create"
+    }]
+}

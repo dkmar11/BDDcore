@@ -1,0 +1,439 @@
+{
+    "type": "object",
+    "required": [
+        "id",
+        "name",
+        "private",
+        "statuses",
+        "multiple_assignees",
+        "features"
+    ],
+    "properties": {
+        "id": {
+            "type": "string",
+            "default": "",
+            "title": "The id Schema",
+            "examples": [
+                "790"
+            ]
+        },
+        "name": {
+            "type": "string",
+            "default": "",
+            "title": "The name Schema",
+            "examples": [
+                "Updated Space Name"
+            ]
+        },
+        "private": {
+            "type": "boolean",
+            "default": false,
+            "title": "The private Schema",
+            "examples": [
+                false
+            ]
+        },
+        "statuses": {
+            "type": "array",
+            "default": [],
+            "title": "The statuses Schema",
+            "items": {
+                "type": "object",
+                "title": "A Schema",
+                "required": [
+                    "status",
+                    "type",
+                    "orderindex",
+                    "color"
+                ],
+                "properties": {
+                    "status": {
+                        "type": "string",
+                        "title": "The status Schema",
+                        "examples": [
+                            "to do",
+                            "complete"
+                        ]
+                    },
+                    "type": {
+                        "type": "string",
+                        "title": "The type Schema",
+                        "examples": [
+                            "open",
+                            "closed"
+                        ]
+                    },
+                    "orderindex": {
+                        "type": "integer",
+                        "title": "The orderindex Schema",
+                        "examples": [
+                            0,
+                            1
+                        ]
+                    },
+                    "color": {
+                        "type": "string",
+                        "title": "The color Schema",
+                        "examples": [
+                            "#d3d3d3",
+                            "#6bc950"
+                        ]
+                    }
+                },
+                "examples": [{
+                    "status": "to do",
+                    "type": "open",
+                    "orderindex": 0,
+                    "color": "#d3d3d3"
+                },
+                {
+                    "status": "complete",
+                    "type": "closed",
+                    "orderindex": 1,
+                    "color": "#6bc950"
+                }]
+            },
+            "examples": [
+                [{
+                    "status": "to do",
+                    "type": "open",
+                    "orderindex": 0,
+                    "color": "#d3d3d3"
+                },
+                {
+                    "status": "complete",
+                    "type": "closed",
+                    "orderindex": 1,
+                    "color": "#6bc950"
+                }]
+            ]
+        },
+        "multiple_assignees": {
+            "type": "boolean",
+            "default": false,
+            "title": "The multiple_assignees Schema",
+            "examples": [
+                false
+            ]
+        },
+        "features": {
+            "type": "object",
+            "default": {},
+            "title": "The features Schema",
+            "required": [
+                "due_dates",
+                "time_tracking",
+                "tags",
+                "time_estimates",
+                "checklists",
+                "custom_fields",
+                "remap_dependencies",
+                "dependency_warning",
+                "portfolios"
+            ],
+            "properties": {
+                "due_dates": {
+                    "type": "object",
+                    "default": {},
+                    "title": "The due_dates Schema",
+                    "required": [
+                        "enabled",
+                        "start_date",
+                        "remap_due_dates",
+                        "remap_closed_due_date"
+                    ],
+                    "properties": {
+                        "enabled": {
+                            "type": "boolean",
+                            "default": false,
+                            "title": "The enabled Schema",
+                            "examples": [
+                                false
+                            ]
+                        },
+                        "start_date": {
+                            "type": "boolean",
+                            "default": false,
+                            "title": "The start_date Schema",
+                            "examples": [
+                                false
+                            ]
+                        },
+                        "remap_due_dates": {
+                            "type": "boolean",
+                            "default": false,
+                            "title": "The remap_due_dates Schema",
+                            "examples": [
+                                false
+                            ]
+                        },
+                        "remap_closed_due_date": {
+                            "type": "boolean",
+                            "default": false,
+                            "title": "The remap_closed_due_date Schema",
+                            "examples": [
+                                false
+                            ]
+                        }
+                    },
+                    "examples": [{
+                        "enabled": false,
+                        "start_date": false,
+                        "remap_due_dates": false,
+                        "remap_closed_due_date": false
+                    }]
+                },
+                "time_tracking": {
+                    "type": "object",
+                    "default": {},
+                    "title": "The time_tracking Schema",
+                    "required": [
+                        "enabled"
+                    ],
+                    "properties": {
+                        "enabled": {
+                            "type": "boolean",
+                            "default": false,
+                            "title": "The enabled Schema",
+                            "examples": [
+                                false
+                            ]
+                        }
+                    },
+                    "examples": [{
+                        "enabled": false
+                    }]
+                },
+                "tags": {
+                    "type": "object",
+                    "default": {},
+                    "title": "The tags Schema",
+                    "required": [
+                        "enabled"
+                    ],
+                    "properties": {
+                        "enabled": {
+                            "type": "boolean",
+                            "default": false,
+                            "title": "The enabled Schema",
+                            "examples": [
+                                false
+                            ]
+                        }
+                    },
+                    "examples": [{
+                        "enabled": false
+                    }]
+                },
+                "time_estimates": {
+                    "type": "object",
+                    "default": {},
+                    "title": "The time_estimates Schema",
+                    "required": [
+                        "enabled"
+                    ],
+                    "properties": {
+                        "enabled": {
+                            "type": "boolean",
+                            "default": false,
+                            "title": "The enabled Schema",
+                            "examples": [
+                                false
+                            ]
+                        }
+                    },
+                    "examples": [{
+                        "enabled": false
+                    }]
+                },
+                "checklists": {
+                    "type": "object",
+                    "default": {},
+                    "title": "The checklists Schema",
+                    "required": [
+                        "enabled"
+                    ],
+                    "properties": {
+                        "enabled": {
+                            "type": "boolean",
+                            "default": false,
+                            "title": "The enabled Schema",
+                            "examples": [
+                                true
+                            ]
+                        }
+                    },
+                    "examples": [{
+                        "enabled": true
+                    }]
+                },
+                "custom_fields": {
+                    "type": "object",
+                    "default": {},
+                    "title": "The custom_fields Schema",
+                    "required": [
+                        "enabled"
+                    ],
+                    "properties": {
+                        "enabled": {
+                            "type": "boolean",
+                            "default": false,
+                            "title": "The enabled Schema",
+                            "examples": [
+                                true
+                            ]
+                        }
+                    },
+                    "examples": [{
+                        "enabled": true
+                    }]
+                },
+                "remap_dependencies": {
+                    "type": "object",
+                    "default": {},
+                    "title": "The remap_dependencies Schema",
+                    "required": [
+                        "enabled"
+                    ],
+                    "properties": {
+                        "enabled": {
+                            "type": "boolean",
+                            "default": false,
+                            "title": "The enabled Schema",
+                            "examples": [
+                                false
+                            ]
+                        }
+                    },
+                    "examples": [{
+                        "enabled": false
+                    }]
+                },
+                "dependency_warning": {
+                    "type": "object",
+                    "default": {},
+                    "title": "The dependency_warning Schema",
+                    "required": [
+                        "enabled"
+                    ],
+                    "properties": {
+                        "enabled": {
+                            "type": "boolean",
+                            "default": false,
+                            "title": "The enabled Schema",
+                            "examples": [
+                                false
+                            ]
+                        }
+                    },
+                    "examples": [{
+                        "enabled": false
+                    }]
+                },
+                "portfolios": {
+                    "type": "object",
+                    "default": {},
+                    "title": "The portfolios Schema",
+                    "required": [
+                        "enabled"
+                    ],
+                    "properties": {
+                        "enabled": {
+                            "type": "boolean",
+                            "default": false,
+                            "title": "The enabled Schema",
+                            "examples": [
+                                false
+                            ]
+                        }
+                    },
+                    "examples": [{
+                        "enabled": false
+                    }]
+                }
+            },
+            "examples": [{
+                "due_dates": {
+                    "enabled": false,
+                    "start_date": false,
+                    "remap_due_dates": false,
+                    "remap_closed_due_date": false
+                },
+                "time_tracking": {
+                    "enabled": false
+                },
+                "tags": {
+                    "enabled": false
+                },
+                "time_estimates": {
+                    "enabled": false
+                },
+                "checklists": {
+                    "enabled": true
+                },
+                "custom_fields": {
+                    "enabled": true
+                },
+                "remap_dependencies": {
+                    "enabled": false
+                },
+                "dependency_warning": {
+                    "enabled": false
+                },
+                "portfolios": {
+                    "enabled": false
+                }
+            }]
+        }
+    },
+    "examples": [{
+        "id": "790",
+        "name": "Updated Space Name",
+        "private": false,
+        "statuses": [{
+            "status": "to do",
+            "type": "open",
+            "orderindex": 0,
+            "color": "#d3d3d3"
+        },
+        {
+            "status": "complete",
+            "type": "closed",
+            "orderindex": 1,
+            "color": "#6bc950"
+        }],
+        "multiple_assignees": false,
+        "features": {
+            "due_dates": {
+                "enabled": false,
+                "start_date": false,
+                "remap_due_dates": false,
+                "remap_closed_due_date": false
+            },
+            "time_tracking": {
+                "enabled": false
+            },
+            "tags": {
+                "enabled": false
+            },
+            "time_estimates": {
+                "enabled": false
+            },
+            "checklists": {
+                "enabled": true
+            },
+            "custom_fields": {
+                "enabled": true
+            },
+            "remap_dependencies": {
+                "enabled": false
+            },
+            "dependency_warning": {
+                "enabled": false
+            },
+            "portfolios": {
+                "enabled": false
+            }
+        }
+    }]
+}

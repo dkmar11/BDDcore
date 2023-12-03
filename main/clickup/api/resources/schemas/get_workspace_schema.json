@@ -1,0 +1,189 @@
+{
+    "type": "object",
+    "required": [
+        "teams"
+    ],
+    "properties": {
+        "teams": {
+            "type": "array",
+            "default": [],
+            "title": "The teams Schema",
+            "items": {
+                "type": "object",
+                "default": {},
+                "title": "A Schema",
+                "required": [
+                    "id",
+                    "name",
+                    "color",
+                    "avatar",
+                    "members"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The id Schema",
+                        "examples": [
+                            "1234"
+                        ]
+                    },
+                    "name": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The name Schema",
+                        "examples": [
+                            "My ClickUp Workspace"
+                        ]
+                    },
+                    "color": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The color Schema",
+                        "examples": [
+                            "#000000"
+                        ]
+                    },
+                    "avatar": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The avatar Schema",
+                        "examples": [
+                            "https://clickup.com/avatar.jpg"
+                        ]
+                    },
+                    "members": {
+                        "type": "array",
+                        "default": [],
+                        "title": "The members Schema",
+                        "items": {
+                            "type": "object",
+                            "default": {},
+                            "title": "A Schema",
+                            "required": [
+                                "user"
+                            ],
+                            "properties": {
+                                "user": {
+                                    "type": "object",
+                                    "default": {},
+                                    "title": "The user Schema",
+                                    "required": [
+                                        "id",
+                                        "username",
+                                        "color",
+                                        "profilePicture"
+                                    ],
+                                    "properties": {
+                                        "id": {
+                                            "type": "integer",
+                                            "default": 0,
+                                            "title": "The id Schema",
+                                            "examples": [
+                                                123
+                                            ]
+                                        },
+                                        "username": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The username Schema",
+                                            "examples": [
+                                                "John Doe"
+                                            ]
+                                        },
+                                        "color": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The color Schema",
+                                            "examples": [
+                                                "#000000"
+                                            ]
+                                        },
+                                        "profilePicture": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The profilePicture Schema",
+                                            "examples": [
+                                                "https://clickup.com/avatar.jpg"
+                                            ]
+                                        }
+                                    },
+                                    "examples": [{
+                                        "id": 123,
+                                        "username": "John Doe",
+                                        "color": "#000000",
+                                        "profilePicture": "https://clickup.com/avatar.jpg"
+                                    }]
+                                }
+                            },
+                            "examples": [{
+                                "user": {
+                                    "id": 123,
+                                    "username": "John Doe",
+                                    "color": "#000000",
+                                    "profilePicture": "https://clickup.com/avatar.jpg"
+                                }
+                            }]
+                        },
+                        "examples": [
+                            [{
+                                "user": {
+                                    "id": 123,
+                                    "username": "John Doe",
+                                    "color": "#000000",
+                                    "profilePicture": "https://clickup.com/avatar.jpg"
+                                }
+                            }]
+                        ]
+                    }
+                },
+                "examples": [{
+                    "id": "1234",
+                    "name": "My ClickUp Workspace",
+                    "color": "#000000",
+                    "avatar": "https://clickup.com/avatar.jpg",
+                    "members": [{
+                        "user": {
+                            "id": 123,
+                            "username": "John Doe",
+                            "color": "#000000",
+                            "profilePicture": "https://clickup.com/avatar.jpg"
+                        }
+                    }]
+                }]
+            },
+            "examples": [
+                [{
+                    "id": "1234",
+                    "name": "My ClickUp Workspace",
+                    "color": "#000000",
+                    "avatar": "https://clickup.com/avatar.jpg",
+                    "members": [{
+                        "user": {
+                            "id": 123,
+                            "username": "John Doe",
+                            "color": "#000000",
+                            "profilePicture": "https://clickup.com/avatar.jpg"
+                        }
+                    }]
+                }]
+            ]
+        }
+    },
+    "examples": [{
+        "teams": [{
+            "id": "1234",
+            "name": "My ClickUp Workspace",
+            "color": "#000000",
+            "avatar": "https://clickup.com/avatar.jpg",
+            "members": [{
+                "user": {
+                    "id": 123,
+                    "username": "John Doe",
+                    "color": "#000000",
+                    "profilePicture": "https://clickup.com/avatar.jpg"
+                }
+            }]
+        }]
+    }]
+}

@@ -1,0 +1,1816 @@
+{
+  "type": "object",
+  "required": [
+      "tasks",
+      "last_page"
+  ],
+  "properties": {
+      "tasks": {
+          "type": "array",
+          "default": [],
+          "title": "The tasks Schema",
+          "items": {
+              "type": "object",
+              "title": "A Schema",
+              "required": [
+                  "id",
+                  "custom_id",
+                  "name",
+                  "text_content",
+                  "description",
+                  "status",
+                  "orderindex",
+                  "date_created",
+                  "date_updated",
+                  "date_closed",
+                  "date_done",
+                  "archived",
+                  "creator",
+                  "assignees",
+                  "watchers",
+                  "checklists",
+                  "tags",
+                  "parent",
+                  "priority",
+                  "due_date",
+                  "start_date",
+                  "points",
+                  "time_estimate",
+                  "custom_fields",
+                  "dependencies",
+                  "linked_tasks",
+                  "team_id",
+                  "url",
+                  "sharing",
+                  "permission_level",
+                  "list",
+                  "project",
+                  "folder",
+                  "space"
+              ],
+              "properties": {
+                  "id": {
+                      "type": "string",
+                      "title": "The id Schema",
+                      "examples": [
+                          "865cme9pt",
+                          "865cme9pd",
+                          "865cme9p1",
+                          "865cme9nj"
+                      ]
+                  },
+                  "custom_id": {
+                      "type": "null",
+                      "title": "The custom_id Schema",
+                      "examples": [
+                          null
+                      ]
+                  },
+                  "name": {
+                      "type": "string",
+                      "title": "The name Schema",
+                      "examples": [
+                          "push request manager",
+                          "exploratory testing",
+                          "daily report",
+                          "kata"
+                      ]
+                  },
+                  "text_content": {
+                      "type": "string",
+                      "title": "The text_content Schema",
+                      "examples": [
+                          ""
+                      ]
+                  },
+                  "description": {
+                      "type": "string",
+                      "title": "The description Schema",
+                      "examples": [
+                          ""
+                      ]
+                  },
+                  "status": {
+                      "type": "object",
+                      "title": "The status Schema",
+                      "required": [
+                          "status",
+                          "color",
+                          "type",
+                          "orderindex"
+                      ],
+                      "properties": {
+                          "status": {
+                              "type": "string",
+                              "title": "The status Schema",
+                              "examples": [
+                                  "done",
+                                  "to do"
+                              ]
+                          },
+                          "color": {
+                              "type": "string",
+                              "title": "The color Schema",
+                              "examples": [
+                                  "#1bbc9c",
+                                  "#d3d3d3"
+                              ]
+                          },
+                          "type": {
+                              "type": "string",
+                              "title": "The type Schema",
+                              "examples": [
+                                  "custom",
+                                  "open"
+                              ]
+                          },
+                          "orderindex": {
+                              "type": "integer",
+                              "title": "The orderindex Schema",
+                              "examples": [
+                                  1,
+                                  0
+                              ]
+                          }
+                      },
+                      "examples": [{
+                          "status": "done",
+                          "color": "#1bbc9c",
+                          "type": "custom",
+                          "orderindex": 1
+                      },
+                      {
+                          "status": "to do",
+                          "color": "#d3d3d3",
+                          "type": "open",
+                          "orderindex": 0
+                      },
+                      {
+                          "status": "to do",
+                          "color": "#d3d3d3",
+                          "type": "open",
+                          "orderindex": 0
+                      },
+                      {
+                          "status": "to do",
+                          "color": "#d3d3d3",
+                          "type": "open",
+                          "orderindex": 0
+                      }]
+                  },
+                  "orderindex": {
+                      "type": "string",
+                      "title": "The orderindex Schema",
+                      "examples": [
+                          "39862597.00001020000000000000000000000000",
+                          "39862595.00000000000000000000000000000000",
+                          "39862594.00000000000000000000000000000000",
+                          "39862593.00000000000000000000000000000000"
+                      ]
+                  },
+                  "date_created": {
+                      "type": "string",
+                      "title": "The date_created Schema",
+                      "examples": [
+                          "1687902021613",
+                          "1687902001426",
+                          "1687901989964",
+                          "1687901980003"
+                      ]
+                  },
+                  "date_updated": {
+                      "type": "string",
+                      "title": "The date_updated Schema",
+                      "examples": [
+                          "1687902026011",
+                          "1687902001426",
+                          "1687901989964",
+                          "1687901980003"
+                      ]
+                  },
+                  "date_closed": {
+                      "type": "null",
+                      "title": "The date_closed Schema",
+                      "examples": [
+                          null
+                      ]
+                  },
+                  "date_done": {
+                      "type": "null",
+                      "title": "The date_done Schema",
+                      "examples": [
+                          null
+                      ]
+                  },
+                  "archived": {
+                      "type": "boolean",
+                      "title": "The archived Schema",
+                      "examples": [
+                          false
+                      ]
+                  },
+                  "creator": {
+                      "type": "object",
+                      "title": "The creator Schema",
+                      "required": [
+                          "id",
+                          "username",
+                          "color",
+                          "email",
+                          "profilePicture"
+                      ],
+                      "properties": {
+                          "id": {
+                              "type": "integer",
+                              "title": "The id Schema",
+                              "examples": [
+                                  61596980
+                              ]
+                          },
+                          "username": {
+                              "type": "string",
+                              "title": "The username Schema",
+                              "examples": [
+                                  "israel"
+                              ]
+                          },
+                          "color": {
+                              "type": "string",
+                              "title": "The color Schema",
+                              "examples": [
+                                  "#0388d1"
+                              ]
+                          },
+                          "email": {
+                              "type": "string",
+                              "title": "The email Schema",
+                              "examples": [
+                                  "israelzambrana@gmail.com"
+                              ]
+                          },
+                          "profilePicture": {
+                              "type": "null",
+                              "title": "The profilePicture Schema",
+                              "examples": [
+                                  null
+                              ]
+                          }
+                      },
+                      "examples": [{
+                          "id": 61596980,
+                          "username": "israel",
+                          "color": "#0388d1",
+                          "email": "israelzambrana@gmail.com",
+                          "profilePicture": null
+                      },
+                      {
+                          "id": 61596980,
+                          "username": "israel",
+                          "color": "#0388d1",
+                          "email": "israelzambrana@gmail.com",
+                          "profilePicture": null
+                      },
+                      {
+                          "id": 61596980,
+                          "username": "israel",
+                          "color": "#0388d1",
+                          "email": "israelzambrana@gmail.com",
+                          "profilePicture": null
+                      },
+                      {
+                          "id": 61596980,
+                          "username": "israel",
+                          "color": "#0388d1",
+                          "email": "israelzambrana@gmail.com",
+                          "profilePicture": null
+                      }]
+                  },
+                  "assignees": {
+                      "type": "array",
+                      "title": "The assignees Schema",
+                      "items": {},
+                      "examples": [
+                          [],
+                          [],
+                          [],
+                          []
+                      ]
+                  },
+                  "watchers": {
+                      "type": "array",
+                      "title": "The watchers Schema",
+                      "items": {},
+                      "examples": [
+                          [],
+                          [],
+                          [],
+                          []
+                      ]
+                  },
+                  "checklists": {
+                      "type": "array",
+                      "title": "The checklists Schema",
+                      "items": {},
+                      "examples": [
+                          [],
+                          [],
+                          [],
+                          []
+                      ]
+                  },
+                  "tags": {
+                      "type": "array",
+                      "title": "The tags Schema",
+                      "items": {},
+                      "examples": [
+                          [],
+                          [],
+                          [],
+                          []
+                      ]
+                  },
+                  "parent": {
+                      "type": "null",
+                      "title": "The parent Schema",
+                      "examples": [
+                          null
+                      ]
+                  },
+                  "priority": {
+                      "type": "null",
+                      "title": "The priority Schema",
+                      "examples": [
+                          null
+                      ]
+                  },
+                  "due_date": {
+                      "type": "null",
+                      "title": "The due_date Schema",
+                      "examples": [
+                          null
+                      ]
+                  },
+                  "start_date": {
+                      "type": "null",
+                      "title": "The start_date Schema",
+                      "examples": [
+                          null
+                      ]
+                  },
+                  "points": {
+                      "type": "null",
+                      "title": "The points Schema",
+                      "examples": [
+                          null
+                      ]
+                  },
+                  "time_estimate": {
+                      "type": "null",
+                      "title": "The time_estimate Schema",
+                      "examples": [
+                          null
+                      ]
+                  },
+                  "custom_fields": {
+                      "type": "array",
+                      "title": "The custom_fields Schema",
+                      "items": {},
+                      "examples": [
+                          [],
+                          [],
+                          [],
+                          []
+                      ]
+                  },
+                  "dependencies": {
+                      "type": "array",
+                      "title": "The dependencies Schema",
+                      "items": {},
+                      "examples": [
+                          [],
+                          [],
+                          [],
+                          []
+                      ]
+                  },
+                  "linked_tasks": {
+                      "type": "array",
+                      "title": "The linked_tasks Schema",
+                      "items": {},
+                      "examples": [
+                          [],
+                          [],
+                          [],
+                          []
+                      ]
+                  },
+                  "team_id": {
+                      "type": "string",
+                      "title": "The team_id Schema",
+                      "examples": [
+                          "9008187605"
+                      ]
+                  },
+                  "url": {
+                      "type": "string",
+                      "title": "The url Schema",
+                      "examples": [
+                          "https://app.clickup.com/t/865cme9pt",
+                          "https://app.clickup.com/t/865cme9pd",
+                          "https://app.clickup.com/t/865cme9p1",
+                          "https://app.clickup.com/t/865cme9nj"
+                      ]
+                  },
+                  "sharing": {
+                      "type": "object",
+                      "title": "The sharing Schema",
+                      "required": [
+                          "public",
+                          "public_share_expires_on",
+                          "public_fields",
+                          "token",
+                          "seo_optimized"
+                      ],
+                      "properties": {
+                          "public": {
+                              "type": "boolean",
+                              "title": "The public Schema",
+                              "examples": [
+                                  false
+                              ]
+                          },
+                          "public_share_expires_on": {
+                              "type": "null",
+                              "title": "The public_share_expires_on Schema",
+                              "examples": [
+                                  null
+                              ]
+                          },
+                          "public_fields": {
+                              "type": "array",
+                              "title": "The public_fields Schema",
+                              "items": {
+                                  "type": "string",
+                                  "title": "A Schema",
+                                  "examples": [
+                                      "assignees",
+                                      "priority",
+                                      "due_date",
+                                      "content",
+                                      "comments",
+                                      "attachments",
+                                      "customFields",
+                                      "subtasks",
+                                      "tags",
+                                      "checklists",
+                                      "coverimage"
+                                  ]
+                              },
+                              "examples": [
+                                  ["assignees",
+                                      "priority",
+                                      "due_date",
+                                      "content",
+                                      "comments",
+                                      "attachments",
+                                      "customFields",
+                                      "subtasks",
+                                      "tags",
+                                      "checklists",
+                                      "coverimage"
+                                  ],
+                                  ["assignees",
+                                      "priority",
+                                      "due_date",
+                                      "content",
+                                      "comments",
+                                      "attachments",
+                                      "customFields",
+                                      "subtasks",
+                                      "tags",
+                                      "checklists",
+                                      "coverimage"
+                                  ],
+                                  ["assignees",
+                                      "priority",
+                                      "due_date",
+                                      "content",
+                                      "comments",
+                                      "attachments",
+                                      "customFields",
+                                      "subtasks",
+                                      "tags",
+                                      "checklists",
+                                      "coverimage"
+                                  ],
+                                  ["assignees",
+                                      "priority",
+                                      "due_date",
+                                      "content",
+                                      "comments",
+                                      "attachments",
+                                      "customFields",
+                                      "subtasks",
+                                      "tags",
+                                      "checklists",
+                                      "coverimage"
+                                  ]
+                              ]
+                          },
+                          "token": {
+                              "type": "null",
+                              "title": "The token Schema",
+                              "examples": [
+                                  null
+                              ]
+                          },
+                          "seo_optimized": {
+                              "type": "boolean",
+                              "title": "The seo_optimized Schema",
+                              "examples": [
+                                  false
+                              ]
+                          }
+                      },
+                      "examples": [{
+                          "public": false,
+                          "public_share_expires_on": null,
+                          "public_fields": [
+                              "assignees",
+                              "priority",
+                              "due_date",
+                              "content",
+                              "comments",
+                              "attachments",
+                              "customFields",
+                              "subtasks",
+                              "tags",
+                              "checklists",
+                              "coverimage"
+                          ],
+                          "token": null,
+                          "seo_optimized": false
+                      },
+                      {
+                          "public": false,
+                          "public_share_expires_on": null,
+                          "public_fields": [
+                              "assignees",
+                              "priority",
+                              "due_date",
+                              "content",
+                              "comments",
+                              "attachments",
+                              "customFields",
+                              "subtasks",
+                              "tags",
+                              "checklists",
+                              "coverimage"
+                          ],
+                          "token": null,
+                          "seo_optimized": false
+                      },
+                      {
+                          "public": false,
+                          "public_share_expires_on": null,
+                          "public_fields": [
+                              "assignees",
+                              "priority",
+                              "due_date",
+                              "content",
+                              "comments",
+                              "attachments",
+                              "customFields",
+                              "subtasks",
+                              "tags",
+                              "checklists",
+                              "coverimage"
+                          ],
+                          "token": null,
+                          "seo_optimized": false
+                      },
+                      {
+                          "public": false,
+                          "public_share_expires_on": null,
+                          "public_fields": [
+                              "assignees",
+                              "priority",
+                              "due_date",
+                              "content",
+                              "comments",
+                              "attachments",
+                              "customFields",
+                              "subtasks",
+                              "tags",
+                              "checklists",
+                              "coverimage"
+                          ],
+                          "token": null,
+                          "seo_optimized": false
+                      }]
+                  },
+                  "permission_level": {
+                      "type": "string",
+                      "title": "The permission_level Schema",
+                      "examples": [
+                          "create"
+                      ]
+                  },
+                  "list": {
+                      "type": "object",
+                      "title": "The list Schema",
+                      "required": [
+                          "id",
+                          "name",
+                          "access"
+                      ],
+                      "properties": {
+                          "id": {
+                              "type": "string",
+                              "title": "The id Schema",
+                              "examples": [
+                                  "900801696767"
+                              ]
+                          },
+                          "name": {
+                              "type": "string",
+                              "title": "The name Schema",
+                              "examples": [
+                                  "List"
+                              ]
+                          },
+                          "access": {
+                              "type": "boolean",
+                              "title": "The access Schema",
+                              "examples": [
+                                  true
+                              ]
+                          }
+                      },
+                      "examples": [{
+                          "id": "900801696767",
+                          "name": "List",
+                          "access": true
+                      },
+                      {
+                          "id": "900801696767",
+                          "name": "List",
+                          "access": true
+                      },
+                      {
+                          "id": "900801696767",
+                          "name": "List",
+                          "access": true
+                      },
+                      {
+                          "id": "900801696767",
+                          "name": "List",
+                          "access": true
+                      }]
+                  },
+                  "project": {
+                      "type": "object",
+                      "title": "The project Schema",
+                      "required": [
+                          "id",
+                          "name",
+                          "hidden",
+                          "access"
+                      ],
+                      "properties": {
+                          "id": {
+                              "type": "string",
+                              "title": "The id Schema",
+                              "examples": [
+                                  "90080921511"
+                              ]
+                          },
+                          "name": {
+                              "type": "string",
+                              "title": "The name Schema",
+                              "examples": [
+                                  "hidden"
+                              ]
+                          },
+                          "hidden": {
+                              "type": "boolean",
+                              "title": "The hidden Schema",
+                              "examples": [
+                                  true
+                              ]
+                          },
+                          "access": {
+                              "type": "boolean",
+                              "title": "The access Schema",
+                              "examples": [
+                                  true
+                              ]
+                          }
+                      },
+                      "examples": [{
+                          "id": "90080921511",
+                          "name": "hidden",
+                          "hidden": true,
+                          "access": true
+                      },
+                      {
+                          "id": "90080921511",
+                          "name": "hidden",
+                          "hidden": true,
+                          "access": true
+                      },
+                      {
+                          "id": "90080921511",
+                          "name": "hidden",
+                          "hidden": true,
+                          "access": true
+                      },
+                      {
+                          "id": "90080921511",
+                          "name": "hidden",
+                          "hidden": true,
+                          "access": true
+                      }]
+                  },
+                  "folder": {
+                      "type": "object",
+                      "title": "The folder Schema",
+                      "required": [
+                          "id",
+                          "name",
+                          "hidden",
+                          "access"
+                      ],
+                      "properties": {
+                          "id": {
+                              "type": "string",
+                              "title": "The id Schema",
+                              "examples": [
+                                  "90080921511"
+                              ]
+                          },
+                          "name": {
+                              "type": "string",
+                              "title": "The name Schema",
+                              "examples": [
+                                  "hidden"
+                              ]
+                          },
+                          "hidden": {
+                              "type": "boolean",
+                              "title": "The hidden Schema",
+                              "examples": [
+                                  true
+                              ]
+                          },
+                          "access": {
+                              "type": "boolean",
+                              "title": "The access Schema",
+                              "examples": [
+                                  true
+                              ]
+                          }
+                      },
+                      "examples": [{
+                          "id": "90080921511",
+                          "name": "hidden",
+                          "hidden": true,
+                          "access": true
+                      },
+                      {
+                          "id": "90080921511",
+                          "name": "hidden",
+                          "hidden": true,
+                          "access": true
+                      },
+                      {
+                          "id": "90080921511",
+                          "name": "hidden",
+                          "hidden": true,
+                          "access": true
+                      },
+                      {
+                          "id": "90080921511",
+                          "name": "hidden",
+                          "hidden": true,
+                          "access": true
+                      }]
+                  },
+                  "space": {
+                      "type": "object",
+                      "title": "The space Schema",
+                      "required": [
+                          "id"
+                      ],
+                      "properties": {
+                          "id": {
+                              "type": "string",
+                              "title": "The id Schema",
+                              "examples": [
+                                  "90080377204"
+                              ]
+                          }
+                      },
+                      "examples": [{
+                          "id": "90080377204"
+                      },
+                      {
+                          "id": "90080377204"
+                      },
+                      {
+                          "id": "90080377204"
+                      },
+                      {
+                          "id": "90080377204"
+                      }]
+                  }
+              },
+              "examples": [{
+                  "id": "865cme9pt",
+                  "custom_id": null,
+                  "name": "push request manager",
+                  "text_content": "",
+                  "description": "",
+                  "status": {
+                      "status": "done",
+                      "color": "#1bbc9c",
+                      "type": "custom",
+                      "orderindex": 1
+                  },
+                  "orderindex": "39862597.00001020000000000000000000000000",
+                  "date_created": "1687902021613",
+                  "date_updated": "1687902026011",
+                  "date_closed": null,
+                  "date_done": null,
+                  "archived": false,
+                  "creator": {
+                      "id": 61596980,
+                      "username": "israel",
+                      "color": "#0388d1",
+                      "email": "israelzambrana@gmail.com",
+                      "profilePicture": null
+                  },
+                  "assignees": [],
+                  "watchers": [],
+                  "checklists": [],
+                  "tags": [],
+                  "parent": null,
+                  "priority": null,
+                  "due_date": null,
+                  "start_date": null,
+                  "points": null,
+                  "time_estimate": null,
+                  "custom_fields": [],
+                  "dependencies": [],
+                  "linked_tasks": [],
+                  "team_id": "9008187605",
+                  "url": "https://app.clickup.com/t/865cme9pt",
+                  "sharing": {
+                      "public": false,
+                      "public_share_expires_on": null,
+                      "public_fields": [
+                          "assignees",
+                          "priority",
+                          "due_date",
+                          "content",
+                          "comments",
+                          "attachments",
+                          "customFields",
+                          "subtasks",
+                          "tags",
+                          "checklists",
+                          "coverimage"
+                      ],
+                      "token": null,
+                      "seo_optimized": false
+                  },
+                  "permission_level": "create",
+                  "list": {
+                      "id": "900801696767",
+                      "name": "List",
+                      "access": true
+                  },
+                  "project": {
+                      "id": "90080921511",
+                      "name": "hidden",
+                      "hidden": true,
+                      "access": true
+                  },
+                  "folder": {
+                      "id": "90080921511",
+                      "name": "hidden",
+                      "hidden": true,
+                      "access": true
+                  },
+                  "space": {
+                      "id": "90080377204"
+                  }
+              },
+              {
+                  "id": "865cme9pd",
+                  "custom_id": null,
+                  "name": "exploratory testing",
+                  "text_content": "",
+                  "description": "",
+                  "status": {
+                      "status": "to do",
+                      "color": "#d3d3d3",
+                      "type": "open",
+                      "orderindex": 0
+                  },
+                  "orderindex": "39862595.00000000000000000000000000000000",
+                  "date_created": "1687902001426",
+                  "date_updated": "1687902001426",
+                  "date_closed": null,
+                  "date_done": null,
+                  "archived": false,
+                  "creator": {
+                      "id": 61596980,
+                      "username": "israel",
+                      "color": "#0388d1",
+                      "email": "israelzambrana@gmail.com",
+                      "profilePicture": null
+                  },
+                  "assignees": [],
+                  "watchers": [],
+                  "checklists": [],
+                  "tags": [],
+                  "parent": null,
+                  "priority": null,
+                  "due_date": null,
+                  "start_date": null,
+                  "points": null,
+                  "time_estimate": null,
+                  "custom_fields": [],
+                  "dependencies": [],
+                  "linked_tasks": [],
+                  "team_id": "9008187605",
+                  "url": "https://app.clickup.com/t/865cme9pd",
+                  "sharing": {
+                      "public": false,
+                      "public_share_expires_on": null,
+                      "public_fields": [
+                          "assignees",
+                          "priority",
+                          "due_date",
+                          "content",
+                          "comments",
+                          "attachments",
+                          "customFields",
+                          "subtasks",
+                          "tags",
+                          "checklists",
+                          "coverimage"
+                      ],
+                      "token": null,
+                      "seo_optimized": false
+                  },
+                  "permission_level": "create",
+                  "list": {
+                      "id": "900801696767",
+                      "name": "List",
+                      "access": true
+                  },
+                  "project": {
+                      "id": "90080921511",
+                      "name": "hidden",
+                      "hidden": true,
+                      "access": true
+                  },
+                  "folder": {
+                      "id": "90080921511",
+                      "name": "hidden",
+                      "hidden": true,
+                      "access": true
+                  },
+                  "space": {
+                      "id": "90080377204"
+                  }
+              },
+              {
+                  "id": "865cme9p1",
+                  "custom_id": null,
+                  "name": "daily report",
+                  "text_content": "",
+                  "description": "",
+                  "status": {
+                      "status": "to do",
+                      "color": "#d3d3d3",
+                      "type": "open",
+                      "orderindex": 0
+                  },
+                  "orderindex": "39862594.00000000000000000000000000000000",
+                  "date_created": "1687901989964",
+                  "date_updated": "1687901989964",
+                  "date_closed": null,
+                  "date_done": null,
+                  "archived": false,
+                  "creator": {
+                      "id": 61596980,
+                      "username": "israel",
+                      "color": "#0388d1",
+                      "email": "israelzambrana@gmail.com",
+                      "profilePicture": null
+                  },
+                  "assignees": [],
+                  "watchers": [],
+                  "checklists": [],
+                  "tags": [],
+                  "parent": null,
+                  "priority": null,
+                  "due_date": null,
+                  "start_date": null,
+                  "points": null,
+                  "time_estimate": null,
+                  "custom_fields": [],
+                  "dependencies": [],
+                  "linked_tasks": [],
+                  "team_id": "9008187605",
+                  "url": "https://app.clickup.com/t/865cme9p1",
+                  "sharing": {
+                      "public": false,
+                      "public_share_expires_on": null,
+                      "public_fields": [
+                          "assignees",
+                          "priority",
+                          "due_date",
+                          "content",
+                          "comments",
+                          "attachments",
+                          "customFields",
+                          "subtasks",
+                          "tags",
+                          "checklists",
+                          "coverimage"
+                      ],
+                      "token": null,
+                      "seo_optimized": false
+                  },
+                  "permission_level": "create",
+                  "list": {
+                      "id": "900801696767",
+                      "name": "List",
+                      "access": true
+                  },
+                  "project": {
+                      "id": "90080921511",
+                      "name": "hidden",
+                      "hidden": true,
+                      "access": true
+                  },
+                  "folder": {
+                      "id": "90080921511",
+                      "name": "hidden",
+                      "hidden": true,
+                      "access": true
+                  },
+                  "space": {
+                      "id": "90080377204"
+                  }
+              },
+              {
+                  "id": "865cme9nj",
+                  "custom_id": null,
+                  "name": "kata",
+                  "text_content": "",
+                  "description": "",
+                  "status": {
+                      "status": "to do",
+                      "color": "#d3d3d3",
+                      "type": "open",
+                      "orderindex": 0
+                  },
+                  "orderindex": "39862593.00000000000000000000000000000000",
+                  "date_created": "1687901980003",
+                  "date_updated": "1687901980003",
+                  "date_closed": null,
+                  "date_done": null,
+                  "archived": false,
+                  "creator": {
+                      "id": 61596980,
+                      "username": "israel",
+                      "color": "#0388d1",
+                      "email": "israelzambrana@gmail.com",
+                      "profilePicture": null
+                  },
+                  "assignees": [],
+                  "watchers": [],
+                  "checklists": [],
+                  "tags": [],
+                  "parent": null,
+                  "priority": null,
+                  "due_date": null,
+                  "start_date": null,
+                  "points": null,
+                  "time_estimate": null,
+                  "custom_fields": [],
+                  "dependencies": [],
+                  "linked_tasks": [],
+                  "team_id": "9008187605",
+                  "url": "https://app.clickup.com/t/865cme9nj",
+                  "sharing": {
+                      "public": false,
+                      "public_share_expires_on": null,
+                      "public_fields": [
+                          "assignees",
+                          "priority",
+                          "due_date",
+                          "content",
+                          "comments",
+                          "attachments",
+                          "customFields",
+                          "subtasks",
+                          "tags",
+                          "checklists",
+                          "coverimage"
+                      ],
+                      "token": null,
+                      "seo_optimized": false
+                  },
+                  "permission_level": "create",
+                  "list": {
+                      "id": "900801696767",
+                      "name": "List",
+                      "access": true
+                  },
+                  "project": {
+                      "id": "90080921511",
+                      "name": "hidden",
+                      "hidden": true,
+                      "access": true
+                  },
+                  "folder": {
+                      "id": "90080921511",
+                      "name": "hidden",
+                      "hidden": true,
+                      "access": true
+                  },
+                  "space": {
+                      "id": "90080377204"
+                  }
+              }]
+          },
+          "examples": [
+              [{
+                  "id": "865cme9pt",
+                  "custom_id": null,
+                  "name": "push request manager",
+                  "text_content": "",
+                  "description": "",
+                  "status": {
+                      "status": "done",
+                      "color": "#1bbc9c",
+                      "type": "custom",
+                      "orderindex": 1
+                  },
+                  "orderindex": "39862597.00001020000000000000000000000000",
+                  "date_created": "1687902021613",
+                  "date_updated": "1687902026011",
+                  "date_closed": null,
+                  "date_done": null,
+                  "archived": false,
+                  "creator": {
+                      "id": 61596980,
+                      "username": "israel",
+                      "color": "#0388d1",
+                      "email": "israelzambrana@gmail.com",
+                      "profilePicture": null
+                  },
+                  "assignees": [],
+                  "watchers": [],
+                  "checklists": [],
+                  "tags": [],
+                  "parent": null,
+                  "priority": null,
+                  "due_date": null,
+                  "start_date": null,
+                  "points": null,
+                  "time_estimate": null,
+                  "custom_fields": [],
+                  "dependencies": [],
+                  "linked_tasks": [],
+                  "team_id": "9008187605",
+                  "url": "https://app.clickup.com/t/865cme9pt",
+                  "sharing": {
+                      "public": false,
+                      "public_share_expires_on": null,
+                      "public_fields": [
+                          "assignees",
+                          "priority",
+                          "due_date",
+                          "content",
+                          "comments",
+                          "attachments",
+                          "customFields",
+                          "subtasks",
+                          "tags",
+                          "checklists",
+                          "coverimage"
+                      ],
+                      "token": null,
+                      "seo_optimized": false
+                  },
+                  "permission_level": "create",
+                  "list": {
+                      "id": "900801696767",
+                      "name": "List",
+                      "access": true
+                  },
+                  "project": {
+                      "id": "90080921511",
+                      "name": "hidden",
+                      "hidden": true,
+                      "access": true
+                  },
+                  "folder": {
+                      "id": "90080921511",
+                      "name": "hidden",
+                      "hidden": true,
+                      "access": true
+                  },
+                  "space": {
+                      "id": "90080377204"
+                  }
+              },
+              {
+                  "id": "865cme9pd",
+                  "custom_id": null,
+                  "name": "exploratory testing",
+                  "text_content": "",
+                  "description": "",
+                  "status": {
+                      "status": "to do",
+                      "color": "#d3d3d3",
+                      "type": "open",
+                      "orderindex": 0
+                  },
+                  "orderindex": "39862595.00000000000000000000000000000000",
+                  "date_created": "1687902001426",
+                  "date_updated": "1687902001426",
+                  "date_closed": null,
+                  "date_done": null,
+                  "archived": false,
+                  "creator": {
+                      "id": 61596980,
+                      "username": "israel",
+                      "color": "#0388d1",
+                      "email": "israelzambrana@gmail.com",
+                      "profilePicture": null
+                  },
+                  "assignees": [],
+                  "watchers": [],
+                  "checklists": [],
+                  "tags": [],
+                  "parent": null,
+                  "priority": null,
+                  "due_date": null,
+                  "start_date": null,
+                  "points": null,
+                  "time_estimate": null,
+                  "custom_fields": [],
+                  "dependencies": [],
+                  "linked_tasks": [],
+                  "team_id": "9008187605",
+                  "url": "https://app.clickup.com/t/865cme9pd",
+                  "sharing": {
+                      "public": false,
+                      "public_share_expires_on": null,
+                      "public_fields": [
+                          "assignees",
+                          "priority",
+                          "due_date",
+                          "content",
+                          "comments",
+                          "attachments",
+                          "customFields",
+                          "subtasks",
+                          "tags",
+                          "checklists",
+                          "coverimage"
+                      ],
+                      "token": null,
+                      "seo_optimized": false
+                  },
+                  "permission_level": "create",
+                  "list": {
+                      "id": "900801696767",
+                      "name": "List",
+                      "access": true
+                  },
+                  "project": {
+                      "id": "90080921511",
+                      "name": "hidden",
+                      "hidden": true,
+                      "access": true
+                  },
+                  "folder": {
+                      "id": "90080921511",
+                      "name": "hidden",
+                      "hidden": true,
+                      "access": true
+                  },
+                  "space": {
+                      "id": "90080377204"
+                  }
+              },
+              {
+                  "id": "865cme9p1",
+                  "custom_id": null,
+                  "name": "daily report",
+                  "text_content": "",
+                  "description": "",
+                  "status": {
+                      "status": "to do",
+                      "color": "#d3d3d3",
+                      "type": "open",
+                      "orderindex": 0
+                  },
+                  "orderindex": "39862594.00000000000000000000000000000000",
+                  "date_created": "1687901989964",
+                  "date_updated": "1687901989964",
+                  "date_closed": null,
+                  "date_done": null,
+                  "archived": false,
+                  "creator": {
+                      "id": 61596980,
+                      "username": "israel",
+                      "color": "#0388d1",
+                      "email": "israelzambrana@gmail.com",
+                      "profilePicture": null
+                  },
+                  "assignees": [],
+                  "watchers": [],
+                  "checklists": [],
+                  "tags": [],
+                  "parent": null,
+                  "priority": null,
+                  "due_date": null,
+                  "start_date": null,
+                  "points": null,
+                  "time_estimate": null,
+                  "custom_fields": [],
+                  "dependencies": [],
+                  "linked_tasks": [],
+                  "team_id": "9008187605",
+                  "url": "https://app.clickup.com/t/865cme9p1",
+                  "sharing": {
+                      "public": false,
+                      "public_share_expires_on": null,
+                      "public_fields": [
+                          "assignees",
+                          "priority",
+                          "due_date",
+                          "content",
+                          "comments",
+                          "attachments",
+                          "customFields",
+                          "subtasks",
+                          "tags",
+                          "checklists",
+                          "coverimage"
+                      ],
+                      "token": null,
+                      "seo_optimized": false
+                  },
+                  "permission_level": "create",
+                  "list": {
+                      "id": "900801696767",
+                      "name": "List",
+                      "access": true
+                  },
+                  "project": {
+                      "id": "90080921511",
+                      "name": "hidden",
+                      "hidden": true,
+                      "access": true
+                  },
+                  "folder": {
+                      "id": "90080921511",
+                      "name": "hidden",
+                      "hidden": true,
+                      "access": true
+                  },
+                  "space": {
+                      "id": "90080377204"
+                  }
+              },
+              {
+                  "id": "865cme9nj",
+                  "custom_id": null,
+                  "name": "kata",
+                  "text_content": "",
+                  "description": "",
+                  "status": {
+                      "status": "to do",
+                      "color": "#d3d3d3",
+                      "type": "open",
+                      "orderindex": 0
+                  },
+                  "orderindex": "39862593.00000000000000000000000000000000",
+                  "date_created": "1687901980003",
+                  "date_updated": "1687901980003",
+                  "date_closed": null,
+                  "date_done": null,
+                  "archived": false,
+                  "creator": {
+                      "id": 61596980,
+                      "username": "israel",
+                      "color": "#0388d1",
+                      "email": "israelzambrana@gmail.com",
+                      "profilePicture": null
+                  },
+                  "assignees": [],
+                  "watchers": [],
+                  "checklists": [],
+                  "tags": [],
+                  "parent": null,
+                  "priority": null,
+                  "due_date": null,
+                  "start_date": null,
+                  "points": null,
+                  "time_estimate": null,
+                  "custom_fields": [],
+                  "dependencies": [],
+                  "linked_tasks": [],
+                  "team_id": "9008187605",
+                  "url": "https://app.clickup.com/t/865cme9nj",
+                  "sharing": {
+                      "public": false,
+                      "public_share_expires_on": null,
+                      "public_fields": [
+                          "assignees",
+                          "priority",
+                          "due_date",
+                          "content",
+                          "comments",
+                          "attachments",
+                          "customFields",
+                          "subtasks",
+                          "tags",
+                          "checklists",
+                          "coverimage"
+                      ],
+                      "token": null,
+                      "seo_optimized": false
+                  },
+                  "permission_level": "create",
+                  "list": {
+                      "id": "900801696767",
+                      "name": "List",
+                      "access": true
+                  },
+                  "project": {
+                      "id": "90080921511",
+                      "name": "hidden",
+                      "hidden": true,
+                      "access": true
+                  },
+                  "folder": {
+                      "id": "90080921511",
+                      "name": "hidden",
+                      "hidden": true,
+                      "access": true
+                  },
+                  "space": {
+                      "id": "90080377204"
+                  }
+              }]
+          ]
+      },
+      "last_page": {
+          "type": "boolean",
+          "default": false,
+          "title": "The last_page Schema",
+          "examples": [
+              true
+          ]
+      }
+  },
+  "examples": [{
+      "tasks": [{
+          "id": "865cme9pt",
+          "custom_id": null,
+          "name": "push request manager",
+          "text_content": "",
+          "description": "",
+          "status": {
+              "status": "done",
+              "color": "#1bbc9c",
+              "type": "custom",
+              "orderindex": 1
+          },
+          "orderindex": "39862597.00001020000000000000000000000000",
+          "date_created": "1687902021613",
+          "date_updated": "1687902026011",
+          "date_closed": null,
+          "date_done": null,
+          "archived": false,
+          "creator": {
+              "id": 61596980,
+              "username": "israel",
+              "color": "#0388d1",
+              "email": "israelzambrana@gmail.com",
+              "profilePicture": null
+          },
+          "assignees": [],
+          "watchers": [],
+          "checklists": [],
+          "tags": [],
+          "parent": null,
+          "priority": null,
+          "due_date": null,
+          "start_date": null,
+          "points": null,
+          "time_estimate": null,
+          "custom_fields": [],
+          "dependencies": [],
+          "linked_tasks": [],
+          "team_id": "9008187605",
+          "url": "https://app.clickup.com/t/865cme9pt",
+          "sharing": {
+              "public": false,
+              "public_share_expires_on": null,
+              "public_fields": [
+                  "assignees",
+                  "priority",
+                  "due_date",
+                  "content",
+                  "comments",
+                  "attachments",
+                  "customFields",
+                  "subtasks",
+                  "tags",
+                  "checklists",
+                  "coverimage"
+              ],
+              "token": null,
+              "seo_optimized": false
+          },
+          "permission_level": "create",
+          "list": {
+              "id": "900801696767",
+              "name": "List",
+              "access": true
+          },
+          "project": {
+              "id": "90080921511",
+              "name": "hidden",
+              "hidden": true,
+              "access": true
+          },
+          "folder": {
+              "id": "90080921511",
+              "name": "hidden",
+              "hidden": true,
+              "access": true
+          },
+          "space": {
+              "id": "90080377204"
+          }
+      },
+      {
+          "id": "865cme9pd",
+          "custom_id": null,
+          "name": "exploratory testing",
+          "text_content": "",
+          "description": "",
+          "status": {
+              "status": "to do",
+              "color": "#d3d3d3",
+              "type": "open",
+              "orderindex": 0
+          },
+          "orderindex": "39862595.00000000000000000000000000000000",
+          "date_created": "1687902001426",
+          "date_updated": "1687902001426",
+          "date_closed": null,
+          "date_done": null,
+          "archived": false,
+          "creator": {
+              "id": 61596980,
+              "username": "israel",
+              "color": "#0388d1",
+              "email": "israelzambrana@gmail.com",
+              "profilePicture": null
+          },
+          "assignees": [],
+          "watchers": [],
+          "checklists": [],
+          "tags": [],
+          "parent": null,
+          "priority": null,
+          "due_date": null,
+          "start_date": null,
+          "points": null,
+          "time_estimate": null,
+          "custom_fields": [],
+          "dependencies": [],
+          "linked_tasks": [],
+          "team_id": "9008187605",
+          "url": "https://app.clickup.com/t/865cme9pd",
+          "sharing": {
+              "public": false,
+              "public_share_expires_on": null,
+              "public_fields": [
+                  "assignees",
+                  "priority",
+                  "due_date",
+                  "content",
+                  "comments",
+                  "attachments",
+                  "customFields",
+                  "subtasks",
+                  "tags",
+                  "checklists",
+                  "coverimage"
+              ],
+              "token": null,
+              "seo_optimized": false
+          },
+          "permission_level": "create",
+          "list": {
+              "id": "900801696767",
+              "name": "List",
+              "access": true
+          },
+          "project": {
+              "id": "90080921511",
+              "name": "hidden",
+              "hidden": true,
+              "access": true
+          },
+          "folder": {
+              "id": "90080921511",
+              "name": "hidden",
+              "hidden": true,
+              "access": true
+          },
+          "space": {
+              "id": "90080377204"
+          }
+      },
+      {
+          "id": "865cme9p1",
+          "custom_id": null,
+          "name": "daily report",
+          "text_content": "",
+          "description": "",
+          "status": {
+              "status": "to do",
+              "color": "#d3d3d3",
+              "type": "open",
+              "orderindex": 0
+          },
+          "orderindex": "39862594.00000000000000000000000000000000",
+          "date_created": "1687901989964",
+          "date_updated": "1687901989964",
+          "date_closed": null,
+          "date_done": null,
+          "archived": false,
+          "creator": {
+              "id": 61596980,
+              "username": "israel",
+              "color": "#0388d1",
+              "email": "israelzambrana@gmail.com",
+              "profilePicture": null
+          },
+          "assignees": [],
+          "watchers": [],
+          "checklists": [],
+          "tags": [],
+          "parent": null,
+          "priority": null,
+          "due_date": null,
+          "start_date": null,
+          "points": null,
+          "time_estimate": null,
+          "custom_fields": [],
+          "dependencies": [],
+          "linked_tasks": [],
+          "team_id": "9008187605",
+          "url": "https://app.clickup.com/t/865cme9p1",
+          "sharing": {
+              "public": false,
+              "public_share_expires_on": null,
+              "public_fields": [
+                  "assignees",
+                  "priority",
+                  "due_date",
+                  "content",
+                  "comments",
+                  "attachments",
+                  "customFields",
+                  "subtasks",
+                  "tags",
+                  "checklists",
+                  "coverimage"
+              ],
+              "token": null,
+              "seo_optimized": false
+          },
+          "permission_level": "create",
+          "list": {
+              "id": "900801696767",
+              "name": "List",
+              "access": true
+          },
+          "project": {
+              "id": "90080921511",
+              "name": "hidden",
+              "hidden": true,
+              "access": true
+          },
+          "folder": {
+              "id": "90080921511",
+              "name": "hidden",
+              "hidden": true,
+              "access": true
+          },
+          "space": {
+              "id": "90080377204"
+          }
+      },
+      {
+          "id": "865cme9nj",
+          "custom_id": null,
+          "name": "kata",
+          "text_content": "",
+          "description": "",
+          "status": {
+              "status": "to do",
+              "color": "#d3d3d3",
+              "type": "open",
+              "orderindex": 0
+          },
+          "orderindex": "39862593.00000000000000000000000000000000",
+          "date_created": "1687901980003",
+          "date_updated": "1687901980003",
+          "date_closed": null,
+          "date_done": null,
+          "archived": false,
+          "creator": {
+              "id": 61596980,
+              "username": "israel",
+              "color": "#0388d1",
+              "email": "israelzambrana@gmail.com",
+              "profilePicture": null
+          },
+          "assignees": [],
+          "watchers": [],
+          "checklists": [],
+          "tags": [],
+          "parent": null,
+          "priority": null,
+          "due_date": null,
+          "start_date": null,
+          "points": null,
+          "time_estimate": null,
+          "custom_fields": [],
+          "dependencies": [],
+          "linked_tasks": [],
+          "team_id": "9008187605",
+          "url": "https://app.clickup.com/t/865cme9nj",
+          "sharing": {
+              "public": false,
+              "public_share_expires_on": null,
+              "public_fields": [
+                  "assignees",
+                  "priority",
+                  "due_date",
+                  "content",
+                  "comments",
+                  "attachments",
+                  "customFields",
+                  "subtasks",
+                  "tags",
+                  "checklists",
+                  "coverimage"
+              ],
+              "token": null,
+              "seo_optimized": false
+          },
+          "permission_level": "create",
+          "list": {
+              "id": "900801696767",
+              "name": "List",
+              "access": true
+          },
+          "project": {
+              "id": "90080921511",
+              "name": "hidden",
+              "hidden": true,
+              "access": true
+          },
+          "folder": {
+              "id": "90080921511",
+              "name": "hidden",
+              "hidden": true,
+              "access": true
+          },
+          "space": {
+              "id": "90080377204"
+          }
+      }],
+      "last_page": true
+  }]
+}

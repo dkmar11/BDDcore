@@ -1,0 +1,827 @@
+{
+  "type": "object",
+  "required": [
+      "id",
+      "custom_id",
+      "name",
+      "text_content",
+      "description",
+      "status",
+      "orderindex",
+      "date_created",
+      "date_updated",
+      "date_closed",
+      "date_done",
+      "archived",
+      "creator",
+      "assignees",
+      "watchers",
+      "checklists",
+      "tags",
+      "parent",
+      "priority",
+      "due_date",
+      "start_date",
+      "points",
+      "time_estimate",
+      "time_spent",
+      "custom_fields",
+      "dependencies",
+      "linked_tasks",
+      "team_id",
+      "url",
+      "sharing",
+      "permission_level",
+      "list",
+      "project",
+      "folder",
+      "space"
+  ],
+  "properties": {
+      "id": {
+          "type": "string",
+          "default": "",
+          "title": "The id Schema",
+          "examples": [
+              "85ztfezr8"
+          ]
+      },
+      "custom_id": {
+          "type": "null",
+          "default": null,
+          "title": "The custom_id Schema",
+          "examples": [
+              null
+          ]
+      },
+      "name": {
+          "type": "string",
+          "default": "",
+          "title": "The name Schema",
+          "examples": [
+              "test_israel2"
+          ]
+      },
+      "text_content": {
+          "type": "string",
+          "default": "",
+          "title": "The text_content Schema",
+          "examples": [
+              "New Task Description"
+          ]
+      },
+      "description": {
+          "type": "string",
+          "default": "",
+          "title": "The description Schema",
+          "examples": [
+              "New Task Description"
+          ]
+      },
+      "status": {
+          "type": "object",
+          "default": {},
+          "title": "The status Schema",
+          "required": [
+              "id",
+              "status",
+              "color",
+              "orderindex",
+              "type"
+          ],
+          "properties": {
+              "id": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The id Schema",
+                  "examples": [
+                      "p90080377204_7oukMUVD"
+                  ]
+              },
+              "status": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The status Schema",
+                  "examples": [
+                      "to do"
+                  ]
+              },
+              "color": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The color Schema",
+                  "examples": [
+                      "#d3d3d3"
+                  ]
+              },
+              "orderindex": {
+                  "type": "integer",
+                  "default": 0,
+                  "title": "The orderindex Schema",
+                  "examples": [
+                      0
+                  ]
+              },
+              "type": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The type Schema",
+                  "examples": [
+                      "open"
+                  ]
+              }
+          },
+          "examples": [{
+              "id": "p90080377204_7oukMUVD",
+              "status": "to do",
+              "color": "#d3d3d3",
+              "orderindex": 0,
+              "type": "open"
+          }]
+      },
+      "orderindex": {
+          "type": "string",
+          "default": "",
+          "title": "The orderindex Schema",
+          "examples": [
+              "39862600.00000000000000000000000000000000"
+          ]
+      },
+      "date_created": {
+          "type": "string",
+          "default": "",
+          "title": "The date_created Schema",
+          "examples": [
+              "1688691256131"
+          ]
+      },
+      "date_updated": {
+          "type": "string",
+          "default": "",
+          "title": "The date_updated Schema",
+          "examples": [
+              "1688691256131"
+          ]
+      },
+      "date_closed": {
+          "type": "null",
+          "default": null,
+          "title": "The date_closed Schema",
+          "examples": [
+              null
+          ]
+      },
+      "date_done": {
+          "type": "null",
+          "default": null,
+          "title": "The date_done Schema",
+          "examples": [
+              null
+          ]
+      },
+      "archived": {
+          "type": "boolean",
+          "default": false,
+          "title": "The archived Schema",
+          "examples": [
+              false
+          ]
+      },
+      "creator": {
+          "type": "object",
+          "default": {},
+          "title": "The creator Schema",
+          "required": [
+              "id",
+              "username",
+              "color",
+              "email",
+              "profilePicture"
+          ],
+          "properties": {
+              "id": {
+                  "type": "integer",
+                  "default": 0,
+                  "title": "The id Schema",
+                  "examples": [
+                      61596980
+                  ]
+              },
+              "username": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The username Schema",
+                  "examples": [
+                      "israel"
+                  ]
+              },
+              "color": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The color Schema",
+                  "examples": [
+                      "#0388d1"
+                  ]
+              },
+              "email": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The email Schema",
+                  "examples": [
+                      "israelzambrana@gmail.com"
+                  ]
+              },
+              "profilePicture": {
+                  "type": "null",
+                  "default": null,
+                  "title": "The profilePicture Schema",
+                  "examples": [
+                      null
+                  ]
+              }
+          },
+          "examples": [{
+              "id": 61596980,
+              "username": "israel",
+              "color": "#0388d1",
+              "email": "israelzambrana@gmail.com",
+              "profilePicture": null
+          }]
+      },
+      "assignees": {
+          "type": "array",
+          "default": [],
+          "title": "The assignees Schema",
+          "items": {},
+          "examples": [
+              []
+          ]
+      },
+      "watchers": {
+          "type": "array",
+          "default": [],
+          "title": "The watchers Schema",
+          "items": {
+              "type": "object",
+              "default": {},
+              "title": "A Schema",
+              "required": [
+                  "id",
+                  "username",
+                  "color",
+                  "initials",
+                  "email",
+                  "profilePicture"
+              ],
+              "properties": {
+                  "id": {
+                      "type": "integer",
+                      "default": 0,
+                      "title": "The id Schema",
+                      "examples": [
+                          61596980
+                      ]
+                  },
+                  "username": {
+                      "type": "string",
+                      "default": "",
+                      "title": "The username Schema",
+                      "examples": [
+                          "israel"
+                      ]
+                  },
+                  "color": {
+                      "type": "string",
+                      "default": "",
+                      "title": "The color Schema",
+                      "examples": [
+                          "#0388d1"
+                      ]
+                  },
+                  "initials": {
+                      "type": "string",
+                      "default": "",
+                      "title": "The initials Schema",
+                      "examples": [
+                          "I"
+                      ]
+                  },
+                  "email": {
+                      "type": "string",
+                      "default": "",
+                      "title": "The email Schema",
+                      "examples": [
+                          "israelzambrana@gmail.com"
+                      ]
+                  },
+                  "profilePicture": {
+                      "type": "null",
+                      "default": null,
+                      "title": "The profilePicture Schema",
+                      "examples": [
+                          null
+                      ]
+                  }
+              },
+              "examples": [{
+                  "id": 61596980,
+                  "username": "israel",
+                  "color": "#0388d1",
+                  "initials": "I",
+                  "email": "israelzambrana@gmail.com",
+                  "profilePicture": null
+              }]
+          },
+          "examples": [
+              [{
+                  "id": 61596980,
+                  "username": "israel",
+                  "color": "#0388d1",
+                  "initials": "I",
+                  "email": "israelzambrana@gmail.com",
+                  "profilePicture": null
+              }]
+          ]
+      },
+      "checklists": {
+          "type": "array",
+          "default": [],
+          "title": "The checklists Schema",
+          "items": {},
+          "examples": [
+              []
+          ]
+      },
+      "tags": {
+          "type": "array",
+          "default": [],
+          "title": "The tags Schema",
+          "items": {},
+          "examples": [
+              []
+          ]
+      },
+      "parent": {
+          "type": "null",
+          "default": null,
+          "title": "The parent Schema",
+          "examples": [
+              null
+          ]
+      },
+      "priority": {
+          "type": "null",
+          "default": null,
+          "title": "The priority Schema",
+          "examples": [
+              null
+          ]
+      },
+      "due_date": {
+          "type": "null",
+          "default": null,
+          "title": "The due_date Schema",
+          "examples": [
+              null
+          ]
+      },
+      "start_date": {
+          "type": "null",
+          "default": null,
+          "title": "The start_date Schema",
+          "examples": [
+              null
+          ]
+      },
+      "points": {
+          "type": "null",
+          "default": null,
+          "title": "The points Schema",
+          "examples": [
+              null
+          ]
+      },
+      "time_estimate": {
+          "type": "null",
+          "default": null,
+          "title": "The time_estimate Schema",
+          "examples": [
+              null
+          ]
+      },
+      "time_spent": {
+          "type": "integer",
+          "default": 0,
+          "title": "The time_spent Schema",
+          "examples": [
+              0
+          ]
+      },
+      "custom_fields": {
+          "type": "array",
+          "default": [],
+          "title": "The custom_fields Schema",
+          "items": {},
+          "examples": [
+              []
+          ]
+      },
+      "dependencies": {
+          "type": "array",
+          "default": [],
+          "title": "The dependencies Schema",
+          "items": {},
+          "examples": [
+              []
+          ]
+      },
+      "linked_tasks": {
+          "type": "array",
+          "default": [],
+          "title": "The linked_tasks Schema",
+          "items": {},
+          "examples": [
+              []
+          ]
+      },
+      "team_id": {
+          "type": "string",
+          "default": "",
+          "title": "The team_id Schema",
+          "examples": [
+              "9008187605"
+          ]
+      },
+      "url": {
+          "type": "string",
+          "default": "",
+          "title": "The url Schema",
+          "examples": [
+              "https://app.clickup.com/t/85ztfezr8"
+          ]
+      },
+      "sharing": {
+          "type": "object",
+          "default": {},
+          "title": "The sharing Schema",
+          "required": [
+              "public",
+              "public_share_expires_on",
+              "public_fields",
+              "token",
+              "seo_optimized"
+          ],
+          "properties": {
+              "public": {
+                  "type": "boolean",
+                  "default": false,
+                  "title": "The public Schema",
+                  "examples": [
+                      false
+                  ]
+              },
+              "public_share_expires_on": {
+                  "type": "null",
+                  "default": null,
+                  "title": "The public_share_expires_on Schema",
+                  "examples": [
+                      null
+                  ]
+              },
+              "public_fields": {
+                  "type": "array",
+                  "default": [],
+                  "title": "The public_fields Schema",
+                  "items": {
+                      "type": "string",
+                      "title": "A Schema",
+                      "examples": [
+                          "assignees",
+                          "priority",
+                          "due_date",
+                          "content",
+                          "comments",
+                          "attachments",
+                          "customFields",
+                          "subtasks",
+                          "tags",
+                          "checklists",
+                          "coverimage"
+                      ]
+                  },
+                  "examples": [
+                      ["assignees",
+                          "priority",
+                          "due_date",
+                          "content",
+                          "comments",
+                          "attachments",
+                          "customFields",
+                          "subtasks",
+                          "tags",
+                          "checklists",
+                          "coverimage"
+                      ]
+                  ]
+              },
+              "token": {
+                  "type": "null",
+                  "default": null,
+                  "title": "The token Schema",
+                  "examples": [
+                      null
+                  ]
+              },
+              "seo_optimized": {
+                  "type": "boolean",
+                  "default": false,
+                  "title": "The seo_optimized Schema",
+                  "examples": [
+                      false
+                  ]
+              }
+          },
+          "examples": [{
+              "public": false,
+              "public_share_expires_on": null,
+              "public_fields": [
+                  "assignees",
+                  "priority",
+                  "due_date",
+                  "content",
+                  "comments",
+                  "attachments",
+                  "customFields",
+                  "subtasks",
+                  "tags",
+                  "checklists",
+                  "coverimage"
+              ],
+              "token": null,
+              "seo_optimized": false
+          }]
+      },
+      "permission_level": {
+          "type": "string",
+          "default": "",
+          "title": "The permission_level Schema",
+          "examples": [
+              "create"
+          ]
+      },
+      "list": {
+          "type": "object",
+          "default": {},
+          "title": "The list Schema",
+          "required": [
+              "id",
+              "name",
+              "access"
+          ],
+          "properties": {
+              "id": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The id Schema",
+                  "examples": [
+                      "900801696767"
+                  ]
+              },
+              "name": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The name Schema",
+                  "examples": [
+                      "List"
+                  ]
+              },
+              "access": {
+                  "type": "boolean",
+                  "default": false,
+                  "title": "The access Schema",
+                  "examples": [
+                      true
+                  ]
+              }
+          },
+          "examples": [{
+              "id": "900801696767",
+              "name": "List",
+              "access": true
+          }]
+      },
+      "project": {
+          "type": "object",
+          "default": {},
+          "title": "The project Schema",
+          "required": [
+              "id",
+              "name",
+              "hidden",
+              "access"
+          ],
+          "properties": {
+              "id": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The id Schema",
+                  "examples": [
+                      "90080921511"
+                  ]
+              },
+              "name": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The name Schema",
+                  "examples": [
+                      "hidden"
+                  ]
+              },
+              "hidden": {
+                  "type": "boolean",
+                  "default": false,
+                  "title": "The hidden Schema",
+                  "examples": [
+                      true
+                  ]
+              },
+              "access": {
+                  "type": "boolean",
+                  "default": false,
+                  "title": "The access Schema",
+                  "examples": [
+                      true
+                  ]
+              }
+          },
+          "examples": [{
+              "id": "90080921511",
+              "name": "hidden",
+              "hidden": true,
+              "access": true
+          }]
+      },
+      "folder": {
+          "type": "object",
+          "default": {},
+          "title": "The folder Schema",
+          "required": [
+              "id",
+              "name",
+              "hidden",
+              "access"
+          ],
+          "properties": {
+              "id": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The id Schema",
+                  "examples": [
+                      "90080921511"
+                  ]
+              },
+              "name": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The name Schema",
+                  "examples": [
+                      "hidden"
+                  ]
+              },
+              "hidden": {
+                  "type": "boolean",
+                  "default": false,
+                  "title": "The hidden Schema",
+                  "examples": [
+                      true
+                  ]
+              },
+              "access": {
+                  "type": "boolean",
+                  "default": false,
+                  "title": "The access Schema",
+                  "examples": [
+                      true
+                  ]
+              }
+          },
+          "examples": [{
+              "id": "90080921511",
+              "name": "hidden",
+              "hidden": true,
+              "access": true
+          }]
+      },
+      "space": {
+          "type": "object",
+          "default": {},
+          "title": "The space Schema",
+          "required": [
+              "id"
+          ],
+          "properties": {
+              "id": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The id Schema",
+                  "examples": [
+                      "90080377204"
+                  ]
+              }
+          },
+          "examples": [{
+              "id": "90080377204"
+          }]
+      }
+  },
+  "examples": [{
+      "id": "85ztfezr8",
+      "custom_id": null,
+      "name": "test_israel2",
+      "text_content": "New Task Description",
+      "description": "New Task Description",
+      "status": {
+          "id": "p90080377204_7oukMUVD",
+          "status": "to do",
+          "color": "#d3d3d3",
+          "orderindex": 0,
+          "type": "open"
+      },
+      "orderindex": "39862600.00000000000000000000000000000000",
+      "date_created": "1688691256131",
+      "date_updated": "1688691256131",
+      "date_closed": null,
+      "date_done": null,
+      "archived": false,
+      "creator": {
+          "id": 61596980,
+          "username": "israel",
+          "color": "#0388d1",
+          "email": "israelzambrana@gmail.com",
+          "profilePicture": null
+      },
+      "assignees": [],
+      "watchers": [{
+          "id": 61596980,
+          "username": "israel",
+          "color": "#0388d1",
+          "initials": "I",
+          "email": "israelzambrana@gmail.com",
+          "profilePicture": null
+      }],
+      "checklists": [],
+      "tags": [],
+      "parent": null,
+      "priority": null,
+      "due_date": null,
+      "start_date": null,
+      "points": null,
+      "time_estimate": null,
+      "time_spent": 0,
+      "custom_fields": [],
+      "dependencies": [],
+      "linked_tasks": [],
+      "team_id": "9008187605",
+      "url": "https://app.clickup.com/t/85ztfezr8",
+      "sharing": {
+          "public": false,
+          "public_share_expires_on": null,
+          "public_fields": [
+              "assignees",
+              "priority",
+              "due_date",
+              "content",
+              "comments",
+              "attachments",
+              "customFields",
+              "subtasks",
+              "tags",
+              "checklists",
+              "coverimage"
+          ],
+          "token": null,
+          "seo_optimized": false
+      },
+      "permission_level": "create",
+      "list": {
+          "id": "900801696767",
+          "name": "List",
+          "access": true
+      },
+      "project": {
+          "id": "90080921511",
+          "name": "hidden",
+          "hidden": true,
+          "access": true
+      },
+      "folder": {
+          "id": "90080921511",
+          "name": "hidden",
+          "hidden": true,
+          "access": true
+      },
+      "space": {
+          "id": "90080377204"
+      }
+  }]
+}

@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "required": [
+        "err",
+        "ECODE"
+    ],
+    "properties": {
+        "err": {
+            "type": "string",
+            "default": "",
+            "title": "The err Schema",
+            "examples": [
+                "Team not authorized"
+            ]
+        },
+        "ECODE": {
+            "type": "string",
+            "default": "",
+            "title": "The ECODE Schema",
+            "examples": [
+                "OAUTH_057"
+            ]
+        }
+    },
+    "examples": [{
+        "err": "Team not authorized",
+        "ECODE": "OAUTH_057"
+    }]
+}
