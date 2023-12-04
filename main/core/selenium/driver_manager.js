@@ -19,7 +19,7 @@ class DriverManager {
       this.driver = await driver_factory.getDriver(browser);
       this.sessionExists = true;
     } else {
-      logger.warn("A session already exist");
+      logger.info("A session already exist");
     }
     logger.info(
       "Session ID:",
@@ -35,7 +35,7 @@ class DriverManager {
     } else {
       await this.driver.quit();
       this.sessionExists = false;
-      logger.warn("Session closed");
+      logger.info("Session closed");
     }
   }
 }

@@ -15,7 +15,7 @@ const configuration_manager = require('../../../main/core/utils/configuration_ma
 const WebDriverActions = require('../../../main/core/utils/ui/web_driver_actions');
 
 Before(async function(scenario) {
-  logger.debug(scenario.pickle.name);
+  logger.info(scenario.pickle.name);
 });
 
 Before({ tags: "@ui" }, async function() {

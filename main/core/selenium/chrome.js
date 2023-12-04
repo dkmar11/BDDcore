@@ -17,8 +17,8 @@ const Chrome = async (configurations) => {
     .setChromeOptions(options)
     .build();
   driver.manage().setTimeouts({ implicit: configuration_manager.setUp.implicit_wait});
-  logger.debug("Chrome browser started");
-  logger.debug("Headless Mode:", configurations.headless);
+  logger.info("Chrome browser started");
+  logger.info("Headless Mode:", configurations.headless);
   return driver;
 };
 

@@ -66,5 +66,9 @@ To run UI tests, run the following command (working)
 ```bash
   npm run test:ui
 ```
+
+## Bugs reports 
+- The bugs reports can be found [here](https://github.com/dkmar11/BDDcore/issues)
+
 ## Cautions
 - UI testing is in progress, the application had some updated in its UI

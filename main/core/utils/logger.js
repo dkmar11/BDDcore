@@ -5,12 +5,12 @@ const fs = require('fs');
 dotenv.config();
 
 const today = new Date();
-const fileNameLog = `${today.getDate()}-${today.getMonth() + 1}-${today.getFullYear()}.log`;
+const fileNameLog = `${today.getDate()}-${today.getMonth() + 1}-${today.getFullYear()}`;
 const logFileStream = fs.createWriteStream('./',{ flags: 'a' });
 
 
 module.exports = pino({
-  level: process.env.PINO_LOG_LEVEL || 'debug',
+  level: process.env.PINO_LOG_LEVEL || 'info',
   transport: {
     targets: [
       {

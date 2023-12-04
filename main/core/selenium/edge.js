@@ -12,8 +12,8 @@ const Edge = async (configurations) => {
   options.windowSize({ height: configurations.window.height, width: configurations.window.width });
   options.excludeSwitches("enable-automation");
   let driver = await new webdriver.Builder().forBrowser("chrome").setChromeOptions(options).build();
-  logger.debug("Edge browser started");
-  logger.debug("Headless Mode:", configurations.headless);
+  logger.info("Edge browser started");
+  logger.info("Headless Mode:", configurations.headless);
   return driver;
 };
 

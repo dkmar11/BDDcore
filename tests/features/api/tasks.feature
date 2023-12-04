@@ -41,7 +41,7 @@ Feature: Tasks
       | description | <task.description> |
     And the response schema should be verified with "update_tasks_schema"
 
-  @61 @negative @bug
+  @negative @bug @2
   Scenario: A user cannot get a random task
     Given the user sets the following parameters for "task":
       | key | value          |
@@ -53,7 +53,7 @@ Feature: Tasks
       | err   | Task not found |
       | ECODE | OTHER          |
 
-  @23 @bug @createTask @createSpace @createFolder @createList @deleteSpace
+  @bug @createTask @createSpace @createFolder @createList @deleteSpace @2
   Scenario: A user can delete a task
     When the user sends a "DELETE" request to "/task/<task.id>"
     Then the response status code should be 200
