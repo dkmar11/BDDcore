@@ -14,7 +14,7 @@ const Remote = async (configuration) => {
     .usingServer(gridUrl)
     .withCapabilities(configuration.capabilities)
     .build();
-  logger.debug(`Remote server started with host: ${host}`);
+  logger.info(`Remote server started with host: ${host}`);
   return driver;
 };
 

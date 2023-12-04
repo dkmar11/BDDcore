@@ -38,10 +38,11 @@ class RequestManager {
 
     try {
       const response = await this.instance.request(requestOptions);
-      logger.debug(`Received response for ${method} request to ${url} | Code status: ${response.status} | body sent: ${JSON.stringify(body)}`);
+      logger.info(`Received response for ${method} request to ${url} | Code status: ${response.status} | body sent: ${JSON.stringify(body)}`);
+      logger.debug(`Response: ${JSON.stringify(response.data)}`);
       return response;
     } catch (error) {
-      logger.debug(`Received response for ${method} request to ${url} | Code status: ${error.response.status} | Response: ${JSON.stringify(error.response.data)} | body sent: ${error.config.data}`);
+      logger.info(`Received response for ${method} request to ${url} | Code status: ${error.response.status} | Response: ${JSON.stringify(error.response.data)} | body sent: ${error.config.data}`);
       return error.response;
     }
   }
