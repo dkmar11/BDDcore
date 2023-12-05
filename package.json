@@ -8,9 +8,9 @@
     "check:features": "gherkin-lint",
     "test": "cucumber-js --config cucumber.js",
     "test:bug": "cucumber-js -p default --tags @bug",
-    "test:ui": "cucumber-js -p default --tags '@api and not @bug'",
-    "test:api": "cucumber-js -p default --tags '@api and not @bug'",
-    "test:jest": "jest --config ./main/core/__test__/jest.config.js"
+    "test:ui": "cucumber-js -p default --tags \"(@ui and not @bug)\"",
+    "test:api": "cucumber-js -p default --tags \"(@api and not @bug)\"",
+    "test:jest": "jest --config ./jest.config.js"
   },
   "author": "",
   "license": "ISC",

@@ -16,7 +16,7 @@ module.exports = {
       },
     ],
   ],
-  runInBand: true,
+  coverageDirectory: './reports/unit_test/coverage',
   verbose: true,
   collectCoverage: true,
   coverageReporters: ['json', 'html'],
