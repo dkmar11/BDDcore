@@ -6,8 +6,7 @@ dotenv.config();
 
 const today = new Date();
 const fileNameLog = `${today.getDate()}-${today.getMonth() + 1}-${today.getFullYear()}`;
-const logFileStream = fs.createWriteStream('./',{ flags: 'a' });
-
+const logFileStream = fs.createWriteStream(`./reports/${fileNameLog}.log`, { flags: 'a' });
 
 module.exports = pino({
   level: process.env.PINO_LOG_LEVEL || 'info',
@@ -32,4 +31,3 @@ module.exports = pino({
     ]
   }
 }, logFileStream);
-
