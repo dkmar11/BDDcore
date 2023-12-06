@@ -67,8 +67,24 @@ To run UI tests, run the following command (working)
   npm run test:ui
 ```
 
+## Deploy to Docker
+Requirements
+- Docker installed
+1.- Build the Container:
+```bash
+  docker build -t <name> .
+```
+2.- Run the Container:
+```bash
+  docker run -it <name>
+```
+Now you can use the previous command 
+
 ## Bugs reports 
 - The bugs reports can be found [here](https://github.com/dkmar11/BDDcore/issues)
+
+## Test analysis and Test design  
+- Access the basic Test Analysis and Design for ClickUp [here](https://docs.google.com/spreadsheets/d/1ug7k0OmLeF3Sh0dLAYzvs0QTlEnj-789W-Mk4dGG6yk/edit?usp=sharing). Please note that acceptance criteria access might be limited.
 
 ## Cautions
 - UI testing is in progress, the application had some updated in its UI
