@@ -29,7 +29,7 @@ When("the user selects All Space settings",async function() {
 });
 
 When("the user selects a space from the sidebar",async function() {
-  await spacePage.selectSpace(this.space.id);
+  await spacePage.selectSpace(this.space.name);
 });
 
 When("the user updates the space with:",async function(table) {

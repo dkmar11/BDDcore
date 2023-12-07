@@ -10,6 +10,7 @@
     "test:bug": "cucumber-js -p default --tags @bug",
     "test:ui": "cucumber-js -p default --tags \"(@ui and not @bug)\"",
     "test:api": "cucumber-js -p default --tags \"(@api and not @bug)\"",
+    "test:case1": "cucumber-js -p default --tags @01",
     "test:jest": "jest --config ./jest.config.js"
   },
   "author": "",

@@ -136,22 +136,24 @@ class SpacePage {
   }
 
   /**
-   * Method to locate the space through its id, it receives as
-   * @param id to insert in the dynamic locator
-   * @returns a CSS locator with the specific id
+   * Method to locate the space through its name, it receives as
+   * @param name to insert in the dynamic locator
+   * @returns a CSS locator with the specific name
    */
-  spaceIdLocation(id) {
-    return By.css(`cu2-project-list-bar-item[data-id='${id}']`);
+  spaceNameLocation(name) {
+    return By.xpath(`//cu-project-row[contains(.,"${name}")]`);
   }
 
   /**
-   * The method performs a click on the new space that was created using API, it receive as
-   * @param id to insert in the dynamics locators, this parameter comes from the space action steps file.
+   * The method performs a click on a space on the side bar.
+   * @param name name of space that it will be clicked on the side bar.
+   * note:
+   * - Side bar should be opened
    */
-  async selectSpace (id){
-    await WebDriverConditions.elementIsVisible(this.spaceIdLocation(id));
-    await WebDriverActions.elementHoverMove(this.spaceIdLocation(id));
-    await WebDriverActions.clickOnElement(this.spaceIdLocation(id));
+  async selectSpace (name){
+    await WebDriverConditions.elementIsVisible(this.spaceNameLocation(name));
+    await WebDriverActions.elementHoverMove(this.spaceNameLocation(name));
+    await WebDriverActions.clickOnElement(this.spaceNameLocation(name));
   }
 
   /**

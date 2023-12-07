@@ -86,5 +86,14 @@ Now you can use the previous command
 ## Test analysis and Test design  
 - Access the basic Test Analysis and Design for ClickUp [here](https://docs.google.com/spreadsheets/d/1ug7k0OmLeF3Sh0dLAYzvs0QTlEnj-789W-Mk4dGG6yk/edit?usp=sharing). Please note that acceptance criteria access might be limited.
 
+#### Test cases from Test design 
+to run the [test cases](https://docs.google.com/document/d/1fEJIDjNIiySEZM4rqhiRfnBNhcDrnZN7OAV_GAL8E18/edit?usp=sharing) created before
+
+@01 "Verify that a user can create a task with only Task name filled"
+```bash
+  npm run test:case1
+```
+@01 "Verify that a error message is displayed when task name is empty" - IN PROGRESS
+
 ## Cautions
 - UI testing is in progress, the application had some updated in its UI

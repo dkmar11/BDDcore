@@ -21,7 +21,7 @@ class WebDriverWaitings {
    */
   static async elementIsLocated(element) {
     const timeout = configuration_manager.setUp.timeout;
-    logger.debug(`Waiting for element ${element} to be located`);
+    logger.info(`Waiting for element ${element} to be located`);
     await this.driver.wait(until.elementLocated(element), timeout);
     await this.driver.wait(until.elementIsVisible(this.driver.findElement(element)), timeout);
     await this.driver.wait(until.elementIsEnabled(this.driver.findElement(element)), timeout);
@@ -36,7 +36,7 @@ class WebDriverWaitings {
  */
   static async idDataIsLocated(element) {
     const timeout = configuration_manager.setUp.timeout;
-    logger.debug(`Waiting for element ${element} to have a valid data-id`);
+    logger.info(`Waiting for element ${element} to have a valid data-id`);
     let dataId;
     let isPending = true;
     while (isPending) {
@@ -52,9 +52,9 @@ class WebDriverWaitings {
       }
     }
     if (isPending) {
-      logger.debug(`Element data-id still has a PENDING value: ${dataId}`);
+      logger.info(`Element data-id still has a PENDING value: ${dataId}`);
     } else {
-      logger.debug(`Element located with data-id: ${dataId}`);
+      logger.info(`Element located with data-id: ${dataId}`);
     }
     return dataId;
   }
@@ -69,7 +69,7 @@ class WebDriverWaitings {
   static async elementIsNotVisible(element) {
     const timeout = configuration_manager.setUp.timeout;
     await this.elementIsLocated(element);
-    logger.debug(`Waiting for element ${element} to be not visible`);
+    logger.info(`Waiting for element ${element} to be not visible`);
     await this.driver.wait(until.elementIsNotVisible(this.driver.findElement(element)), timeout);
   }
 
@@ -81,7 +81,7 @@ class WebDriverWaitings {
  */
   static async waitForElementPropertyWithValue(element, propertyName, desiredValue) {
     const timeout = configuration_manager.setUp.timeout;
-    logger.debug(`Waiting for element property ${propertyName} to have value: ${desiredValue}`);
+    logger.info(`Waiting for element property ${propertyName} to have value: ${desiredValue}`);
     await this.driver.wait(async () => {
       const actualValue = await (await this.driver.findElement(element)).getAttribute(propertyName);
       return actualValue === desiredValue;
@@ -95,7 +95,7 @@ class WebDriverWaitings {
    */
   static async spaceElementIsLocated(selector) {
     const timeout = configuration_manager.setUp.timeout;
-    logger.debug(`Waiting for element with selector ${selector} to be located`);
+    logger.info(`Waiting for element with selector ${selector} to be located`);
     const bySelector = By.xpath(selector); 
     await this.driver.wait(until.elementLocated(bySelector), timeout);
   }
@@ -109,11 +109,11 @@ class WebDriverWaitings {
     const timeout = configuration_manager.setUp.timeout;
     try{
       await this.driver.wait(until.elementLocated(selector), configuration_manager.setUp.conditions_timeout);
-      logger.debug(`Waiting for element ${selector} to be stale`);
+      logger.info(`Waiting for element ${selector} to be stale`);
       await this.driver.wait(until.stalenessOf(await this.driver.findElement(selector)), timeout);
     }
     catch{
-      logger.debug('Element was not appear')
+      logger.info('Element was not appear')
     }
   }
   
@@ -127,7 +127,7 @@ class WebDriverWaitings {
     const timeout = configuration_manager.setUp.timeout;
     await this.elementIsLocated(element);
     await this.driver.wait(until.elementIsVisible(this.driver.findElement(element)), timeout);
-    logger.debug(`Waiting for element ${element} to be visible`);
+    logger.info(`Waiting for element ${element} to be visible`);
   }
 
   /**
@@ -140,7 +140,7 @@ class WebDriverWaitings {
     const timeout = configuration_manager.setUp.timeout;
     await this.elementIsLocated(element);
     await this.driver.wait(until.elementIsEnabled(this.driver.findElement(element)), timeout);
-    logger.debug(`Waiting for element ${element} to be visible`);
+    logger.info(`Waiting for element ${element} to be visible`);
   }
 
   /**
@@ -162,7 +162,7 @@ class WebDriverWaitings {
         }
       }, timeout);
     } catch (err) {
-      logger.debug(`Element is still visible after waiting: ${element}`);
+      logger.info(`Element is still visible after waiting: ${element}`);
     }
   }
 
@@ -188,7 +188,7 @@ class WebDriverWaitings {
  */
   static async elementIsLocatedOnly(element) {
     const timeout = configuration_manager.setUp.timeout;
-    logger.debug(`Waiting for element ${element} to be located`);
+    logger.info(`Waiting for element ${element} to be located`);
     await this.driver.wait(until.elementLocated(element), timeout);
     await this.driver.wait(until.elementIsVisible(this.driver.findElement(element)), timeout);
   }
