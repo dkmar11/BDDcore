@@ -98,3 +98,12 @@ Feature: UI Boards
     And the user marks the task "<task.name>" as completed in board by button
     Then a popup modal should appear with the following message: "<task.name>"
     And the "<task.name>" task should be displayed in the COMPLETE section on board
+
+  @01 @smoke @testing
+  Scenario: Verify that a user can creat a task with only Task name filled
+    Given the user logs into ClickUp portal as "free" user
+    When the user selects a space from the sidebar
+    And the user creates a task with the following parameters:
+      | Name | (randomNameTask) |
+    And the user saves the task
+    Then a popup modal should appear with the following message: "<task.name> Created!"

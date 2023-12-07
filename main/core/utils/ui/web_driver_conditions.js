@@ -22,7 +22,7 @@ class WebDriverConditions {
    */
   static async elementIsVisible(element) {
     const timeout = configuration_manager.setUp.conditions_timeout;
-    logger.debug(`Waiting ${timeout}ms for element ${element} to be visible`);
+    logger.info(`Waiting ${timeout}ms for element ${element} to be visible`);
     try {
       await this.driver.wait(until.elementIsVisible(this.driver.findElement(element)), timeout);
       return true;

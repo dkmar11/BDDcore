@@ -20,7 +20,7 @@ class WebDriverGettings {
   static async getText(element) {
     await WebDriverWaitings.elementIsLocated(element)
     const text = await this.driver.findElement(element).getText();
-    logger.debug(`text of the ${element} is: \n${text}`)
+    logger.info(`text of the ${element} is: \n${text}`)
     return text;
   }
   /**
@@ -32,7 +32,7 @@ class WebDriverGettings {
   static async getValueAttribute(element, Attribute) {
     await WebDriverWaitings.elementIsLocated(element)
     const value = await this.driver.findElement(element).getAttribute(Attribute);
-    logger.debug(`Attribute of the ${element} is: \n${Attribute}=${value}`)
+    logger.info(`Attribute of the ${element} is: \n${Attribute}=${value}`)
     return value;
   }
 
@@ -46,7 +46,7 @@ class WebDriverGettings {
    */
   static async getElements(element) {
     const value = await this.driver.findElements(element);
-    logger.debug(`Elements of the ${element} are: \n$${value}`)
+    logger.info(`Elements of the ${element} are: \n$${value}`)
     return value;
   }
 
@@ -71,7 +71,7 @@ class WebDriverGettings {
   static async getColor(element) {
     const value = await this.driver.findElement(element);
     const color = await value.getCssValue('color');
-    logger.debug(`The color is: ${color}`)
+    logger.info(`The color is: ${color}`)
     const rgbaValues = color.match(/\d+/g);
     const hexColor = this.rgbToHex(rgbaValues[0], rgbaValues[1], rgbaValues[2]).toUpperCase();
     return hexColor;

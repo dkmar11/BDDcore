@@ -15,7 +15,7 @@ class LoginPage{
     this.loginSubmit = By.css('[data-test="login-submit"]');
     this.inputEmail = By.id('login-email-input');
     this.inputPassword = By.id('login-password-input');
-    this.dashboard = By.css('.cu-location-overview-widgets__widget-area');
+    this.dashboard = By.css('div[data-test="dashboard__router-outlet-canvas"]');
     this.baseURL = configurationManager.environment["ui-url"];
   }
   /**

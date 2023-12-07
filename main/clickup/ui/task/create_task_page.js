@@ -10,23 +10,23 @@ class CreateTaskPage{
    * Constructor of the class where the selector are declared
    */
   constructor(){
-    this.newTaskButton = By.css('div[data-test="float-button__toggle-simple-container-create-task"]');
-    this.titleInput = By.css('textarea[cupendoid="quick-create-task-name-field"]');
+    this.newTaskButton = By.css('button[data-test="create-task-menu__new-task-button"]');
+    this.titleInput = By.css('textarea[data-test="draft-view__title-task"]');
     this.descriptionInput = By.css('.ql-block[data-block-id*="block"]');
-    this.summitButton = By.css('div[data-test="draft-view__submit-btn_createTask"]');
+    this.summitButton = By.css('button[data-test="draft-view__quick-create-create"]');
     this.addSubTaskButton = By.css('div[class*="add-item-subtask"], a[class*="subtasks-add"]')
     this.subTaskControlButton = By.css('div[class*="subtasks-controls"]')
   }
   /**
    * @param {Object} task - object that must contains the following task information:
    * task.name - name of the task
-   * task.description - description of the task
+   * task.description - description of the task, default it is an empty string
    */
   async createTask(task){
     logger.debug("Creating task");
     await WebDriverActions.clickOnElement(this.newTaskButton);
     await WebDriverActions.sendKeys(this.titleInput, task.name);
-    await WebDriverActions.sendKeys(this.descriptionInput, task.description);
+    await WebDriverActions.sendKeys(this.descriptionInput, task.description||"");
   }
   /**
    * Method to add subtasks to a task

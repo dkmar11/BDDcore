@@ -18,7 +18,7 @@ class WebDriverActions {
    * @param {String} url  - URL to be navigated
    */
   static async navigateTo(url) {
-    logger.debug(`Navigated to ${url}`);
+    logger.info(`Navigated to ${url}`);
     await this.driver.get(url);
   }
   /**
@@ -67,7 +67,7 @@ class WebDriverActions {
    * static and asynchronous method to send the "Enter" key to the active element
    */
   static async sendEnterKeyToActiveElement() {
-    logger.debug(`Sending ENTER key to active element`);
+    logger.info(`Sending ENTER key to active element`);
     await WebDriverActions.driver.switchTo().activeElement().sendKeys(Key.ENTER);
   }
   /**
@@ -95,7 +95,7 @@ class WebDriverActions {
    * static and asynchronous method to send the "escape" key to the active element
    */
   static async sendEscapeKey() {
-    logger.debug(`Sending ESC key to active element`);
+    logger.info(`Sending ESC key to active element`);
     await this.driver.switchTo().activeElement().sendKeys(Key.ESCAPE);
   }
   /**
@@ -104,7 +104,7 @@ class WebDriverActions {
   static async takeScreenshot() {
     try {
       const screenshot = await this.driver.takeScreenshot();
-      logger.debug(`Screenshot taken`);
+      logger.info(`Screenshot taken`);
       return screenshot;
     } catch (error) {
       logger.error('Error while taking screenshot:', error);
