@@ -104,6 +104,22 @@ Feature: UI Boards
     Given the user logs into ClickUp portal as "free" user
     When the user selects a space from the sidebar
     And the user creates a task with the following parameters:
-      | Name | (randomNameTask) |
+      | Name        | (randomNameTask) |
+      | Description | (empty)          |
     And the user saves the task
     Then a popup modal should appear with the following message: "<task.name> Created!"
+
+  @02 @negative @testing
+  Scenario: Verify that a error message is displayed when task name is empty
+    Given the user logs into ClickUp portal as "free" user
+    When the user selects a space from the sidebar
+    And the user creates a task with the following parameters:
+      | Name        | (empty) |
+      | Description | (empty) |
+    And the user saves the task
+    Then "Enter Task Name" message should apper on the task creation window
+    And the user creates a task with the following parameters:
+      | Name        | (empty)                 |
+      | Description | (randomDescriptionTask) |
+    And the user saves the task
+    And "Enter Task Name" message should apper on the task creation window

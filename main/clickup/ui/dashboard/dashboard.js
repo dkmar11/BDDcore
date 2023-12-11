@@ -15,6 +15,7 @@ class Dashboard {
     this.searchInput = By.css('input[data-test="search-filter-input"]');
     this.resultRows = By.css('cu-task-row[data-test="task-list__task-row"]');
     this.archivedSpacesOption = By.xpath("//div[contains(@class,'cu-sts__tab ng-star-inserted')][contains(., 'Archived Spaces')]");
+    this.cardItemSkeleton = By.css('div[class*="CardItemSkeleton"]');
   }
   /**
    * method to get the selector of the result of the search on dashboard

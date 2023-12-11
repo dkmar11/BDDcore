@@ -11,6 +11,8 @@
     "test:ui": "cucumber-js -p default --tags \"(@ui and not @bug)\"",
     "test:api": "cucumber-js -p default --tags \"(@api and not @bug)\"",
     "test:case1": "cucumber-js -p default --tags @01",
+    "test:case2": "cucumber-js -p default --tags @02",
+    "test:testing": "cucumber-js -p default --tags @testing",
     "test:jest": "jest --config ./jest.config.js"
   },
   "author": "",

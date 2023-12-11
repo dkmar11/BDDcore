@@ -5,15 +5,10 @@ const dashboard = require("../../../../main/clickup/ui/dashboard/dashboard");
 const taskPage = require("../../../../main/clickup/ui/task/task_page");
 const WebDriverActions = require("../../../../main/core/utils/ui/web_driver_actions");
 
-When("the user creates a task with the following parameters:",async function(table) {
+When, Then("the user creates a task with the following parameters:",async function(table) {
   const objTable = table.rowsHash();
   Object.keys(objTable).forEach(async(key) => {
-    let value = objTable[key];
-    if (value.startsWith("(random") ) {
-      const method = objTable[key].replace(/[()]/g, "")
-      value = await randomGenerator[method]();
-    }
-    this.task[key.toLowerCase()] = value;
+    this.task[key.toLowerCase()] = randomGenerator.randomHandler(objTable[key]);
   });
   await createTaskPage.createTask(this.task)
 });

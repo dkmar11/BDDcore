@@ -82,6 +82,29 @@ class RandomGenerator {
     const nameList = faker.word.noun() + Date.now();
     return nameList
   }
+  /**
+   * @returns return a empty string.
+   */
+  empty() {
+    return ""
+  }
+
+  /**
+   * Executes a method of RandomGenerator class 
+   * @param {*} string - method to be executed it should be a string with the following structure:
+   * (name method)
+   * @returns - the result of the method that was executed 
+   * @example
+   * randomHandler("(randomNameTask)")
+   */
+  randomHandler(string) {
+    let value = string
+    if (string.startsWith("(")) {
+      const method = string.replace(/[()]/g, "");
+      value = this[method]();
+    }
+    return value
+  }
 }
 
 module.exports = new RandomGenerator();

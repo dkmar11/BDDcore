@@ -93,7 +93,13 @@ to run the [test cases](https://docs.google.com/document/d/1fEJIDjNIiySEZM4rqhiR
 ```bash
   npm run test:case1
 ```
-@01 "Verify that a error message is displayed when task name is empty" - IN PROGRESS
-
+@01 "Verify that a error message is displayed when task name is empty"
+```bash
+  npm run test:case2
+```
+@01 and @02
+```bash
+  npm run test:testing
+```
 ## Cautions
 - UI testing is in progress, the application had some updated in its UI

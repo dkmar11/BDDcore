@@ -3,6 +3,8 @@ const randomGenerator = require("../../../../main/core/utils/random_generator");
 const spacePage = require("../../../../main/clickup/ui/space/space_page");
 const spaceSummaryPage = require("../../../../main/clickup/ui/space/space_summary_page");
 const spaceModalPage = require("../../../../main/clickup/ui/space/space_modal_page");
+const WebDriverWaitings = require("../../../../main/core/utils/ui/web_driver_waitings");
+const dashboard = require("../../../../main/clickup/ui/dashboard/dashboard");
 
 When("the user selects the new space option from the sidebar",async function() {
   await spacePage.clickNewSpaceButton();
@@ -30,6 +32,7 @@ When("the user selects All Space settings",async function() {
 
 When("the user selects a space from the sidebar",async function() {
   await spacePage.selectSpace(this.space.name);
+  await WebDriverWaitings.elementIsStale(dashboard.cardItemSkeleton)
 });
 
 When("the user updates the space with:",async function(table) {
